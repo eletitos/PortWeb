@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Lato', sans-serif;
 }
 
 /* ----------------------------------HEATHER---------------------------------- */
@@ -122,3 +123,12 @@
         display: none;
     }
 
+    .titulo{
+        float: right;
+        padding-top: 30%;
+        padding-right: 2em;
+        font-weight: 900;
+        font-size: 1.5rem;
+        max-width: 50%;
+        text-align: left;
+    }
