@@ -13,10 +13,15 @@ $(document).ready(function () {
     var cortinaBlanca;
    // var altoVentana = $(window).height();
     
-    $('h1').show();
-  // $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '150px'})
+   $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
+   $('h1').show();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
+
+    for (let i = 0; i < datos.length; i++) {
+        $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
+        
+    }
   
     
 /*------------------------EVENTOS----------------------------------------*/  

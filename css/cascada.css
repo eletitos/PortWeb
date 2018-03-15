@@ -16,21 +16,24 @@
 
     .barra-superior{
         overflow: hidden;
-        background: white; 
+        background: white;
         height: 5vw;
         position: fixed;
         top:0;
         width: 100%;
         z-index: 10;
-  
+
     }
 
-  
+
     h1{
+        margin: 0;
+        padding: 30vh;
         font-size: 8rem;
         text-align: center;
         width: 100%;
-        display:none;
+        /* position: absolute; */
+        display:none; 
     }
 
     .flecha{
@@ -43,15 +46,7 @@
         left: 50vw;
     }
 
-    .contenedor{
-        display: flex;
 
-    }
-
-    .contenedor .columna{
-        flex: 1;
-        /* margin: 5px; */
-    }
 
     .contenedor .imagen{
         width: 100%;
@@ -124,5 +119,6 @@
         bottom: 0;
         z-index: 10;
         height: 5vw;
+        display: none;
     }
 
