@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----------------------------------HEATHER---------------------------------- */
+
+    .caja-cabecera{
+        height: 100vh;
+        background: white;
+        margin: 0;
+        padding:0;
+    }
+
+    .barra-superior{
+        overflow: hidden;
+        background: white; 
+        height: 5vw;
+        position: fixed;
+        top:0;
+        width: 100%;
+        z-index: 10;
+  
+    }
+
+  
+    h1{
+        font-size: 8rem;
+        text-align: center;
+        width: 100%;
+        display:none;
+    }
+
+    .flecha{
+        width: 3px;
+        height: 10vh;
+        background: black;
+        margin: auto;
+        position: absolute;
+        top: 90vh;
+        left: 50vw;
+    }
+
+    .contenedor{
+        display: flex;
+
+    }
+
+    .contenedor .columna{
+        flex: 1;
+        /* margin: 5px; */
+    }
+
+    .contenedor .imagen{
+        width: 100%;
+        max-width: 2000px;
+        /* margin: 10px; */
+    }
+
+/* ---------------------------MAIN------------------------ */
+
+    .contenedor{
+
+        width: 90%;
+        max-width: 2000px;
+        height: 8000px;
+        overflow: hidden;
+        background: chartreuse;
+        position: relative;
+        margin: auto;
+    }
+
+    button{
+        height: 10vh;
+        width: 20vw;
+    }
+
+    .imagen{
+        position: absolute;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .imagen img{
+        vertical-align: top;
+        width: 100%;
+
+
+
+    }
+
+    .contenedor-cortina{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cortina{
+        position: absolute;
+        background: rgb(43, 43, 43);
+        color:white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+
+    }
+
+
+    .cortinaBlanca{
+        background-color: rgb(141, 23, 23);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+
+    .tags{
+        width: 100%;
+        background: white;
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        height: 5vw;
+    }
+
