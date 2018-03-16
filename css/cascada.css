@@ -8,12 +8,6 @@
 
 /* ----------------------------------HEATHER---------------------------------- */
 
-    .caja-cabecera{
-        height: 100vh;
-        background: white;
-        margin: 0;
-        padding:0;
-    }
 
     .barra-superior{
         overflow: hidden;
@@ -23,9 +17,35 @@
         top:0;
         width: 100%;
         z-index: 10;
-
+        
     }
 
+    .contenedor-logo{
+        float: left;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .contenedor-logo svg{
+        width: 100%;
+    }
+
+    .contenedor-menu{
+        float: right;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .contenedor-menu svg{
+        width: 100%;
+    }
+
+    .caja-cabecera{
+        height: 100vh;
+        background: white;
+        margin: 0;
+        padding:0;
+    }
 
     h1{
         margin: 0;
@@ -33,6 +53,7 @@
         font-size: 8rem;
         text-align: center;
         width: 100%;
+        color: rgb(43, 43, 43);
         /* position: absolute; */
         display:none; 
     }
@@ -106,13 +127,6 @@
     }
 
 
-    .cortinaBlanca{
-        background-color: rgb(141, 23, 23);
-        width: 100vw;
-        height: 100vh;
-        display: none;
-    }
-
     .tags{
         width: 100%;
         background: white;
@@ -132,3 +146,7 @@
         max-width: 50%;
         text-align: left;
     }
+
+
+
+
