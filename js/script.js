@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     for (let i = 0; i < datos.length; i++) {
         $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
-        
+
     }
   
     
@@ -53,8 +53,8 @@ $(document).ready(function () {
 
     $('.contenedor-menu').on('click', function () {
         $('.cortina-menu').toggleClass('menu-desplegado');
-
-    console.log('menu desplegado');
+        $('#arriba').toggleClass('arriba-cruz');
+        $('#abajo').toggleClass('abajo-cruz');
     });
 
 
