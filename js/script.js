@@ -51,6 +51,12 @@ $(document).ready(function () {
         $(this).find('.cortina').stop(true, false).slideUp();
       });
 
+    $('.contenedor-menu').on('click', function () {
+        $('.cortina-menu').toggleClass('menu-desplegado');
+
+    console.log('menu desplegado');
+    });
+
 
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/

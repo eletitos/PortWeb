@@ -6,9 +6,7 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* ----------------------------------HEATHER---------------------------------- */
-
-
+/* --------------------BARRA SUPERIOR-------------------------- */
     .barra-superior{
         overflow: hidden;
         background: white;
@@ -40,6 +38,8 @@
         width: 100%;
     }
 
+/* ------------------------CABECERA--------------------------- */
+
     .caja-cabecera{
         height: 100vh;
         background: white;
@@ -68,13 +68,30 @@
         left: 50vw;
     }
 
+/* ----------------------MENU--------------------------     */
 
+header div{
+    background-color: rgb(43, 43, 43);
+    position: fixed;
+    top: 5vw;
+    bottom: 5vw;
+    width: 0vw;
+    z-index: 20;
+    transition: all 0.5s;
+}
 
-    .contenedor .imagen{
-        width: 100%;
-        max-width: 2000px;
-        /* margin: 10px; */
-    }
+header .izquierda{
+    left: 5vw;
+}
+
+header .derecha{
+    right: 5vw;
+}
+
+header .menu-desplegado{
+width: 51vw;
+}
+
 
 /* ---------------------------MAIN------------------------ */
 
