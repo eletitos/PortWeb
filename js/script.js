@@ -40,15 +40,18 @@ $(document).ready(function () {
        
         
     $(window).scroll(function () {  
-            for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
-                arrayMinimos.pop(); 
-            }
-            calculoPosicion();
-         
-            $('.caja-cabecera h1').slideUp(200);
-           $('.caja-cabecera').animate({
-               height: '5vw'
-           },400)
+        for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
+            arrayMinimos.pop(); 
+        }
+        calculoPosicion();
+        if(primerScroll){
+            
+            $(window).scrollTop(0);
+           //  $('.caja-cabecera h1').slideUp(200);
+            $('.caja-cabecera').animate({
+                height: '5vw'
+            },400, function () { primerScroll = false })
+         }
   
     })
 
@@ -64,18 +67,18 @@ $(document).ready(function () {
         $('#abajo').toggleClass('abajo-cruz');
     });
 
-   $(window).on('wheel', function () {
+  /* $(window).on('wheel', function () {
  
         if(primerScroll){
           
-                    $('html, body').animate({
-                        scrollTop: '0'
-                    })}
+         $('html, body').animate({
+            scrollTop: '0'
+        })}
         primerScroll=false;
         
-    });
+    });*/
 
-    //document.addEventListener('')
+ 
 
 
 

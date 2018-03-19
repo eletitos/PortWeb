@@ -55,7 +55,7 @@
         text-align: center;
         width: 100%;
         color: rgb(43, 43, 43);
-        position: fixed;
+        position: fixed; 
         display:none; 
     }
 
