@@ -119,7 +119,7 @@ svg path{
         max-width: 2000px;
         height: 8000px;
         overflow: hidden;
-        background: chartreuse;
+        background: white;
         position: relative;
         margin: auto;
     
@@ -187,6 +187,11 @@ svg path{
         font-size: 1.5rem;
         max-width: 50%;
         text-align: left;
+    }
+
+    .ajuste{
+        width: 100%;
+        height: 5vw;
     }
 
 
