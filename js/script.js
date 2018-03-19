@@ -11,6 +11,8 @@ $(document).ready(function () {
     var contenedor = $('#contenedor');
     var imagen = $('.imagen');
     var cortinaBlanca;
+    var primerScroll = true;
+    var numRueda= 1;
    // var altoVentana = $(window).height();
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
@@ -42,7 +44,11 @@ $(document).ready(function () {
                 arrayMinimos.pop(); 
             }
             calculoPosicion();
-            console.log('se ha hecho scroll')
+            console.log('se ha hecho scroll');
+            $('.caja-ajuste').show();
+            $('.caja-cabecera h1').slideUp(200);
+            $('.caja-cabecera').slideUp(1000);
+  
     })
 
     imagen.hover(function() {                             //Cortina negra cd pasa el ratón.
@@ -56,6 +62,20 @@ $(document).ready(function () {
         $('#arriba').toggleClass('arriba-cruz');
         $('#abajo').toggleClass('abajo-cruz');
     });
+
+   $(window).on('wheel', function () {
+        console.log('ha movido la rueda ' + numRueda + ' vez' );
+        numRueda++;
+        if(primerScroll){
+          
+                    $('html, body').animate({
+                        scrollTop: '0'
+                    })}
+primerScroll=false;
+        
+    });
+
+    //document.addEventListener('')
 
 
 
