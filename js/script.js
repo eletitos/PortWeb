@@ -13,7 +13,8 @@ $(document).ready(function () {
     var cortinaBlanca;
     var primerScroll = true;
     var numRueda= 1;
-   // var altoVentana = $(window).height();
+    var altoVentana = $(window).height();
+    var anchoVentana = $(window).width();
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
    $('h1').show();
@@ -24,6 +25,8 @@ $(document).ready(function () {
         $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
 
     }
+    /*var posicionPie = altoVentana - 0.05*anchoVentana;
+    $('.tags').css('bottom', posicionPie + 'px');*/
   
     
 /*------------------------EVENTOS----------------------------------------*/  
@@ -48,10 +51,11 @@ $(document).ready(function () {
             
             $(window).scrollTop(0);
            //  $('.caja-cabecera h1').slideUp(200);
-            $('.caja-cabecera').animate({
-                height: '5vw'
-            },400, function () { primerScroll = false })
-         }
+            $('.caja-cabecera').addClass('recogida');
+            $('.tags').addClass('tag-desplegado');
+           setTimeout(function () {  primerScroll = false}, 900) ;
+
+        }
   
     })
 
