@@ -44,10 +44,11 @@ $(document).ready(function () {
                 arrayMinimos.pop(); 
             }
             calculoPosicion();
-            console.log('se ha hecho scroll');
-            $('.caja-ajuste').show();
+         
             $('.caja-cabecera h1').slideUp(200);
-            $('.caja-cabecera').slideUp(1000);
+           $('.caja-cabecera').animate({
+               height: '5vw'
+           },400)
   
     })
 
@@ -64,14 +65,13 @@ $(document).ready(function () {
     });
 
    $(window).on('wheel', function () {
-        console.log('ha movido la rueda ' + numRueda + ' vez' );
-        numRueda++;
+ 
         if(primerScroll){
           
                     $('html, body').animate({
                         scrollTop: '0'
                     })}
-primerScroll=false;
+        primerScroll=false;
         
     });
 
