@@ -64,11 +64,6 @@ $(document).ready(function () {
         $(this).find('.cortina').stop(true, false).slideUp();
       });
 
-    $('.contenedor-menu').on('click', function () {
-        $('.cortina-menu').toggleClass('menu-desplegado');
-        $('#arriba').toggleClass('arriba-cruz');
-        $('#abajo').toggleClass('abajo-cruz');
-    });
 
     $('.contenedor-logo').on('click', function () {
         $(window).scrollTop(0);
