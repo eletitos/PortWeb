@@ -16,6 +16,7 @@ $(document).ready(function () {
     var altoVentana = $(window).height();
     var botonMenu = document.getElementById('menu-icon');
     var scrollPosition = 0;
+    var mostrarCortina = true;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
@@ -27,8 +28,6 @@ $(document).ready(function () {
         $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
 
     }
-   
-  
     
 /*------------------------EVENTOS----------------------------------------*/  
     $(window).resize(function () {  //Evento para cuando se redimensiona la pantalla
@@ -78,7 +77,12 @@ $(document).ready(function () {
         scrollPosition = $(window).scrollTop();
     })
 
-  
+    imagen.click(function(){
+        imagen.not(this).toggleClass('ocultar');
+        $(this).find('.cortina').toggleClass('ocultar');
+       // $(this).removeClass('ocultar');
+        
+    })
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
@@ -98,9 +102,6 @@ $(document).ready(function () {
             
             arrayMinimos[index] = minimo + $(this).outerHeight();       //Establezco la nueva altura de la columna
 
-          
-
-            
          })
 
          var maximo = Math.max.apply(null, arrayMinimos);
@@ -132,7 +133,4 @@ $(document).ready(function () {
         console.log('ancho columna = ' + anchoColumnas);
     }
     
-    
-
-
 });
