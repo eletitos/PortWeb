@@ -14,6 +14,8 @@ $(document).ready(function () {
     var primerScroll = true;
     var numRueda= 1;
     var altoVentana = $(window).height();
+    var botonMenu = document.getElementById('menu-icon');
+    var scrollPosition = 0;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
@@ -42,36 +44,41 @@ $(document).ready(function () {
        
         
     $(window).scroll(function () {  
-        for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
-            arrayMinimos.pop(); 
+        
+        if(botonMenu.checked){                          //Se fija el scroll si el menú está desplegado.
+            $(window).scrollTop(scrollPosition);
+        }else{
+            for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
+                arrayMinimos.pop(); 
+            }
+            calculoPosicion();
+            if(primerScroll){                       //Se establece la animación del primer scroll.  
+                $(window).scrollTop(0);
+                $('.caja-cabecera').addClass('recogida');
+                $('.tags').addClass('tag-desplegado');
+                setTimeout(function () {  primerScroll = false}, 900) ;        
+            }
         }
-        calculoPosicion();
-        if(primerScroll){
-            
-            $(window).scrollTop(0);
-           //  $('.caja-cabecera h1').slideUp(200);
-            $('.caja-cabecera').addClass('recogida');
-            $('.tags').addClass('tag-desplegado');
-           setTimeout(function () {  primerScroll = false}, 900) ;
-
-        }
-  
     })
 
     imagen.hover(function() {                             //Cortina negra cd pasa el ratón.
         $(this).find('.cortina').stop(true, false).slideDown();
       }, function() {
         $(this).find('.cortina').stop(true, false).slideUp();
-      });
+    });
 
 
-    $('.contenedor-logo').on('click', function () {
+    $('.contenedor-logo').on('click', function () {     //PROVISIONAL. Para que recargue la página cuando se le de al logo
         $(window).scrollTop(0);
         location.reload();
         console.log('recargado');
     });
 
+    $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
+        scrollPosition = $(window).scrollTop();
+    })
 
+  
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
