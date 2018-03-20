@@ -61,9 +61,10 @@ $(document).ready(function () {
     })
 
     imagen.hover(function() {                             //Cortina negra cd pasa el ratón.
-        $(this).find('.cortina').stop(true, false).slideDown();
-      }, function() {
-        $(this).find('.cortina').stop(true, false).slideUp();
+        if(mostrarCortina){
+            $(this).find('.cortina').stop(true, false).slideDown();  //Función ejecutada cuando el ratón entra
+      }}, function() {
+        $(this).find('.cortina').stop(true, false).slideUp(); //función ejecutada cuando el ratón sale.
     });
 
 
@@ -79,9 +80,10 @@ $(document).ready(function () {
 
     imagen.click(function(){
         imagen.not(this).toggleClass('ocultar');
-        $(this).find('.cortina').toggleClass('ocultar');
-       // $(this).removeClass('ocultar');
-        
+        $(this).find('.cortina').hide();
+        $(this).toggleClass('posicion-2');
+        mostrarCortina = !mostrarCortina;                   //Alternar valor booleano
+
     })
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
