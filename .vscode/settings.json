@@ -1,0 +1,22 @@
+{
+    "liveSassCompile.settings.formats":[
+       {                            //Salva un archivo normal, para controlar
+           "format": "expanded",
+           "extensionName": ".css",
+           "savePath": "/css"
+       },
+       {                            //salva un archivo comprimido, que pese menos
+           "extensionName": ".min.css",
+           "format": "compressed",
+           "savePath": "/css"
+       }
+   ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**"
+   ],
+   "liveSassCompile.settings.generateMap": false,     //para no generar archivo map
+   "liveSassCompile.settings.autoprefix": null,
+   //"liveSassCompile.settings.showOutputWindow": true     //se va ejecutando en pantalla.
+
+}

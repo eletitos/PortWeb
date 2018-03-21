@@ -1,0 +1,37 @@
+header .cortina-menu{
+    background-color: $colorFuente;
+    position: fixed;
+    top: $margenCuadro;
+    bottom: $margenCuadro;
+    width: 0vw;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;   //Para animación de la cortina cuando se despliega el menú
+    //:nth-of-type(1){left: $margenCuadro;}
+    //:nth-of-type(2){right: $margenCuadro;}
+}
+
+
+.cortina-menu:nth-of-type(1){
+    left: $margenCuadro;
+}
+
+.cortina-menu:nth-of-type(2){
+    right: $margenCuadro;
+}
+
+// ------------------ANIMACIONES-------------------------------
+input[type="checkbox"]:checked ~ header .cortina-menu{
+width: 51vw;
+}
+
+svg path{
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked + label #arriba{
+    d: path("M22.2,22.2 L77.5,77.5");
+}
+
+input[type="checkbox"]:checked + label #abajo{
+    d: path("M22.2,77.5 L77.5,22.2");
+}

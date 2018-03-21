@@ -1,0 +1,37 @@
+.ocultar{
+    display: none;
+}
+
+.posicion-1{
+    position: fixed;
+    top: 5vw !important;
+    left: 5vw !important;
+    width: auto !important;
+}
+
+.posicion-2{
+    position: fixed;
+    top: auto !important;
+    bottom: 5vw !important;
+    right: 5vw !important;
+    left: auto !important;
+    width: auto !important;
+}
+
+.posicion-3{
+    position: fixed;
+    top: auto !important;
+    bottom: 5vw !important;
+    right: auto !important;
+    left: 5vw !important;
+    width: auto !important;
+}
+
+.posicion-4{
+    position: fixed;
+    top: 5vw !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: 5vw !important;
+    width: auto !important;
+}

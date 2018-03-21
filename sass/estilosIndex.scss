@@ -1,0 +1,13 @@
+$tipografia: 'Lato', sans-serif;
+$margenCuadro: 5vw;
+$colorFuente: rgb(43, 43, 43);
+$colorCabecera: white;
+$curvaRebote: cubic-bezier(0.670, 0.080, 0.250, 1.505);
+
+@import 'generales';
+@import 'barraSuperior';
+@import 'cabecera';
+@import 'menu';
+@import 'main';
+@import 'footer';
+@import 'interaccion';

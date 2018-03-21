@@ -1,0 +1,33 @@
+.caja-cabecera{
+    height: 100vh;
+    background: $colorCabecera;
+    margin: 0;
+    padding:0;
+    transition: all 900ms $curvaRebote;
+  
+}
+
+.recogida{                      //Plantearse cambiar de documento??
+    height: $margenCuadro;
+}
+
+h1{
+    margin: 0;
+    padding: 20vh;
+    font-size: 8rem;
+    text-align: center;
+    width: 100%;
+    color: $colorFuente;
+    position: fixed; 
+    display:none; 
+}
+
+.flecha{
+    width: 3px;
+    height: 10vh;
+    background: black;
+    margin: auto;
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+}

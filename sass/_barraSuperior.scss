@@ -1,0 +1,26 @@
+
+.barra-superior{
+    overflow: hidden;
+    background: white;
+    height: $margenCuadro;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+.contenedor-logo{
+    float: left;
+    width: $margenCuadro;
+    height: $margenCuadro;
+    svg{width:100%}       //tamaño del logo dentro de la caja
+}
+
+.contenedor-menu{
+    float: right;
+    width: $margenCuadro;
+    height: $margenCuadro;
+    svg{width: 100%}        //Tamaño del icono de menú dentro de la caja
+}
+
