@@ -2,36 +2,38 @@
     display: none;
 }
 
-.posicion-1{
+.posicion{
+    width: auto !important;
     position: fixed;
+    height: auto !important;
+}
+
+.posicion-1{
+    @extend .posicion;
     top: 5vw !important;
     left: 5vw !important;
-    width: auto !important;
 }
 
 .posicion-2{
-    position: fixed;
+    @extend .posicion;
     top: auto !important;
     bottom: 5vw !important;
     right: 5vw !important;
     left: auto !important;
-    width: auto !important;
 }
 
 .posicion-3{
-    position: fixed;
+    @extend .posicion;
     top: auto !important;
     bottom: 5vw !important;
     right: auto !important;
     left: 5vw !important;
-    width: auto !important;
 }
 
 .posicion-4{
-    position: fixed;
+    @extend .posicion;
     top: 5vw !important;
     bottom: auto !important;
     left: auto !important;
     right: 5vw !important;
-    width: auto !important;
 }

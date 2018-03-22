@@ -6,7 +6,6 @@ $(document).ready(function () {
     var numeroColumnas;
     var anchoContenedor;
     var anchoColumnas;
-    var anchoContenedor;
     var arrayMinimos = [];
     var contenedor = $('#contenedor');
     var imagen = $('.imagen');
@@ -16,7 +15,8 @@ $(document).ready(function () {
     var altoVentana = $(window).height();
     var botonMenu = document.getElementById('menu-icon');
     var scrollPosition = 0;
-    var mostrarCortina = true;
+    var modoMosaico = true;
+    var aleatorio;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
@@ -44,7 +44,7 @@ $(document).ready(function () {
         
     $(window).scroll(function () {  
         
-        if(botonMenu.checked){                          //Se fija el scroll si el menú está desplegado.
+        if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             $(window).scrollTop(scrollPosition);
         }else{
             for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
@@ -61,28 +61,44 @@ $(document).ready(function () {
     })
 
     imagen.hover(function() {                             //Cortina negra cd pasa el ratón.
-        if(mostrarCortina){
+        if(modoMosaico){
             $(this).find('.cortina').stop(true, false).slideDown();  //Función ejecutada cuando el ratón entra
       }}, function() {
         $(this).find('.cortina').stop(true, false).slideUp(); //función ejecutada cuando el ratón sale.
     });
 
 
-    $('.contenedor-logo').on('click', function () {     //PROVISIONAL. Para que recargue la página cuando se le de al logo
+  /*  $('.contenedor-logo').on('click', function () {     //PROVISIONAL. Para que recargue la página cuando se le de al logo
         $(window).scrollTop(0);
         location.reload();
         console.log('recargado');
-    });
+    });*/
 
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
         scrollPosition = $(window).scrollTop();
     })
 
     imagen.click(function(){
-        imagen.not(this).toggleClass('ocultar');
-        $(this).find('.cortina').hide();
-        $(this).toggleClass('posicion-2');
-        mostrarCortina = !mostrarCortina;                   //Alternar valor booleano
+        if(modoMosaico){
+            scrollPosition = $(window).scrollTop();
+            imagen.not(this).addClass('ocultar');
+            $(this).find('.cortina').hide();
+            aleatorio = Math.ceil(Math.random()*4);
+            $(this).addClass('posicion-'+ aleatorio);
+            tamañoMaximoFotos(this);
+
+            modoMosaico = !modoMosaico;                   //Alternar valor booleano
+        }else{
+            imagen.not(this).removeClass('ocultar');
+            $(this).removeClass('posicion-'+ aleatorio);
+            $(this).find('img').css({
+                maxWidth: '',
+                maxHeight: '',
+                width: '100%'
+            });
+            modoMosaico = !modoMosaico;    
+        }
+        console.log('mostrar Mosaico: ' + modoMosaico + 'numero aleatorio: ' + aleatorio);
 
     })
 
@@ -129,10 +145,27 @@ $(document).ready(function () {
         }
         anchoColumnas = 100/numeroColumnas;
         imagen.css('width', anchoColumnas + '%');
-        console.log(numeroColumnas);
         anchoContenedor = contenedor.width();
         console.log('Ancho del contenedor = ' + anchoContenedor);
         console.log('ancho columna = ' + anchoColumnas);
     }
     
 });
+
+//--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
+
+    function tamañoMaximoFotos(selector) {
+        let alturaVentana = $(window).height();
+        let alturaBarraSuperior = $('.barra-superior').height();
+        let alturaFooter = $('.ajuste-pie').height();
+        let alturaMaxima = alturaVentana - alturaBarraSuperior - alturaFooter;
+        let ancho = $('#contenedor').width();;
+    
+        $(selector).find('img').css({
+            maxWidth: ancho + 'px',
+            maxHeight: alturaMaxima + 'px',
+            width: 'auto'
+        });
+
+
+    }
