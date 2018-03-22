@@ -20,6 +20,7 @@ body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background: white;
 }
 
 h1, h2, p, ol, ul {
@@ -136,20 +137,27 @@ header .cortina-menu {
   transition: all 0.3s ease-in-out;
 }
 
-.cortina-menu:nth-of-type(1) {
-  left: 5vw;
+header .cortina-menu:nth-of-type(1) {
+  left: 4.8vw;
 }
 
-.cortina-menu:nth-of-type(2) {
-  right: 5vw;
+header .cortina-menu:nth-of-type(2) {
+  right: 4.8vw;
+}
+
+/*.cortina-menu:nth-of-type(1){
+    left: $margenCuadro;
+}
+
+.cortina-menu:nth-of-type(2){
+    right: $margenCuadro;
+}*/
+svg path {
+  transition: 0.2s;
 }
 
 input[type="checkbox"]:checked ~ header .cortina-menu {
   width: 51vw;
-}
-
-svg path {
-  transition: 0.2s;
 }
 
 input[type="checkbox"]:checked + label #arriba {
@@ -161,7 +169,7 @@ input[type="checkbox"]:checked + label #abajo {
 }
 
 .contenedor {
-  width: 90vw;
+  width: 90%;
   max-width: 2000px;
   height: 8000px;
   overflow: hidden;

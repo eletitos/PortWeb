@@ -1,10 +1,10 @@
 .contenedor{
 
-    width: 100vw - 2*$margenCuadro;
+    width: $anchoContenedor;
     max-width: 2000px;
     height: 8000px;  //mirar si necesito este valor
     overflow: hidden;
-    background: white;
+    background:$colorFondo;
     position: relative;
     margin: auto;
 
@@ -32,7 +32,7 @@
 .cortina{
     position: absolute;
     background: $colorFuente;
-    color:white;
+    color: $colorFondo;
     top: 0;
     bottom: 0;
     left: 0;
