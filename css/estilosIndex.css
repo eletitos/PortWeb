@@ -145,15 +145,50 @@ header .cortina-menu:nth-of-type(2) {
   right: 4.8vw;
 }
 
-/*.cortina-menu:nth-of-type(1){
-    left: $margenCuadro;
+nav {
+  height: auto;
+  position: fixed;
+  top: 5vw;
+  left: 5vw;
+  width: 90%;
+  z-index: 30;
+  opacity: 0;
+  transition: 0.3s;
 }
 
-.cortina-menu:nth-of-type(2){
-    right: $margenCuadro;
-}*/
+nav ul {
+  height: auto;
+  display: none;
+  flex-direction: column;
+  padding: 1em;
+}
+
+nav ul li {
+  font-size: 3vmax;
+  color: white;
+  font-weight: 900;
+  flex: 0;
+  padding: 0.1em;
+}
+
+nav ul li:nth-child(6) {
+  flex: 1;
+}
+
+nav ul li a {
+  color: white;
+}
+
 svg path {
   transition: 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  /*  ~ header nav{
+        display: block; 
+        opacity: 100;
+        ul{display:flex;}
+    }*/
 }
 
 input[type="checkbox"]:checked ~ header .cortina-menu {

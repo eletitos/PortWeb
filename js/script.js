@@ -17,12 +17,14 @@ $(document).ready(function () {
     var scrollPosition = 0;
     var modoMosaico = true;
     var aleatorio;
+    var dispositivoMovil = false;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
    $('h1').show();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
+    alturaMenu();
 
     for (let i = 0; i < datos.length; i++) {
         $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
@@ -38,6 +40,7 @@ $(document).ready(function () {
           // altoVentana = $(window).height();
             calcularColumnas();
             calculoPosicion();
+            alturaMenu();
         });
 
        
@@ -60,19 +63,31 @@ $(document).ready(function () {
         }
     })
 
-    imagen.hover(function() {                             //Cortina negra cd pasa el ratón.
-        if(modoMosaico){
-            $(this).find('.cortina').stop(true, false).slideDown();  //Función ejecutada cuando el ratón entra
-      }}, function() {
-        $(this).find('.cortina').stop(true, false).slideUp(); //función ejecutada cuando el ratón sale.
+
+    $(window).on('touchstart', function () { 
+        dispositivoMovil = true;
+        $(window).off('touchstart')
+     })
+
+
+
+    imagen.on('mouseover', function() {                             //Cortina negra cd pasa el ratón.
+        if(modoMosaico & !dispositivoMovil){
+            $(this).find('.cortina').stop(true, false).slideDown();  //Función ejecutada cuando el ratón entra, en modo mosaico y si el dispositivo no es movil.
+        }
+        if(dispositivoMovil){
+            imagen.off('mouseover');
+        }
     });
 
+    imagen.on('mouseleave', function() {
+        $(this).find('.cortina').stop(true, false).slideUp(); //función ejecutada cuando el ratón sale.
+        if(dispositivoMovil){
+            imagen.off('mouseleave');
+            console.log('mouseleave desactivado');
+        }
+    });
 
-  /*  $('.contenedor-logo').on('click', function () {     //PROVISIONAL. Para que recargue la página cuando se le de al logo
-        $(window).scrollTop(0);
-        location.reload();
-        console.log('recargado');
-    });*/
 
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
         scrollPosition = $(window).scrollTop();
@@ -169,3 +184,12 @@ $(document).ready(function () {
 
 
     }
+
+
+//-------------FUNCIÓN CALCULO ALTURA MENÚ-----------------
+
+function alturaMenu() { 
+    let altoMenu = $('.cortina-menu').height();
+    $('nav ul').css('height', altoMenu+'px');
+    console.log('la altura del menú es '+ altoMenu + 'px');
+ }

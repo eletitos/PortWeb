@@ -10,14 +10,36 @@ header .cortina-menu{
     &:nth-of-type(2){right: $margenCuadro - 0.2vw};
 }
 
-
-/*.cortina-menu:nth-of-type(1){
+nav{
+    height: auto;
+    position:fixed;
+    top: $margenCuadro;
     left: $margenCuadro;
+    width: $anchoContenedor;
+    z-index: 30;
+    //display:none;
+    opacity: 0;
+    transition: 0.3s;
+    ul{
+        height: auto;
+        display: none;
+        flex-direction: column;
+        padding: 1em;
+        li{
+            font-size: 3vmax;
+            color: $colorFondo;
+            font-weight: 900;
+            flex: 0;
+            padding: 0.1em;
+            &:nth-child(6){flex:1;}
+        }
+    }
 }
 
-.cortina-menu:nth-of-type(2){
-    right: $margenCuadro;
-}*/
+nav ul li a{
+    color: $colorFondo;
+
+}
 
 // ------------------ANIMACIONES-------------------------------
 
@@ -39,4 +61,10 @@ input[type="checkbox"]:checked {        //Animaciones producidas cuando se pulsa
     + label #abajo{
         d: path("M22.2,77.5 L77.5,22.2");
     }
+
+  /*  ~ header nav{
+        display: block; 
+        opacity: 100;
+        ul{display:flex;}
+    }*/
 }
