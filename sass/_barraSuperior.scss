@@ -24,3 +24,14 @@
     svg{width: 100%}        //Tamaño del icono de menú dentro de la caja
 }
 
+svg line{
+    fill: none;
+    stroke:$colorFuente;
+    stroke-width: 13px;
+    transition: transform 0.5s $curvaRebote;
+    transform-origin: 50% 50%;
+  
+  }
+
+
+

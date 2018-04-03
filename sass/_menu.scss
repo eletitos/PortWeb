@@ -54,17 +54,17 @@ input[type="checkbox"]:checked {        //Animaciones producidas cuando se pulsa
     width: 51vw;
     }
     
-    + label #arriba{
-        d: path("M22.2,22.2 L77.5,77.5");
+    + label .arriba{
+        transform: rotate(45deg) translate(0%, 18.7%);
     }
     
-    + label #abajo{
-        d: path("M22.2,77.5 L77.5,22.2");
+    + label .abajo{
+        transform: rotate(-45deg) translate(0%, -18.7%);
     }
 
-  /*  ~ header nav{
+    ~ header nav{
         display: block; 
         opacity: 100;
         ul{display:flex;}
-    }*/
+    }
 }

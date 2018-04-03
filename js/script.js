@@ -18,6 +18,7 @@ $(document).ready(function () {
     var modoMosaico = true;
     var aleatorio;
     var dispositivoMovil = false;
+    var menuDesplegado = false;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
@@ -91,6 +92,7 @@ $(document).ready(function () {
 
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
         scrollPosition = $(window).scrollTop();
+    
     })
 
     imagen.click(function(){
@@ -165,7 +167,7 @@ $(document).ready(function () {
         console.log('ancho columna = ' + anchoColumnas);
     }
     
-});
+
 
 //--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
 
@@ -193,3 +195,7 @@ function alturaMenu() {
     $('nav ul').css('height', altoMenu+'px');
     console.log('la altura del menú es '+ altoMenu + 'px');
  }
+
+
+
+});

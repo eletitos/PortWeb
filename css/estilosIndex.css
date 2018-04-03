@@ -94,6 +94,14 @@ button {
   width: 100%;
 }
 
+svg line {
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 13px;
+  transition: transform 0.5s cubic-bezier(0.67, 0.08, 0.25, 1.505);
+  transform-origin: 50% 50%;
+}
+
 .caja-cabecera {
   height: 100vh;
   background: white;
@@ -183,24 +191,25 @@ svg path {
   transition: 0.2s;
 }
 
-input[type="checkbox"]:checked {
-  /*  ~ header nav{
-        display: block; 
-        opacity: 100;
-        ul{display:flex;}
-    }*/
-}
-
 input[type="checkbox"]:checked ~ header .cortina-menu {
   width: 51vw;
 }
 
-input[type="checkbox"]:checked + label #arriba {
-  d: path("M22.2,22.2 L77.5,77.5");
+input[type="checkbox"]:checked + label .arriba {
+  transform: rotate(45deg) translate(0%, 18.7%);
 }
 
-input[type="checkbox"]:checked + label #abajo {
-  d: path("M22.2,77.5 L77.5,22.2");
+input[type="checkbox"]:checked + label .abajo {
+  transform: rotate(-45deg) translate(0%, -18.7%);
+}
+
+input[type="checkbox"]:checked ~ header nav {
+  display: block;
+  opacity: 100;
+}
+
+input[type="checkbox"]:checked ~ header nav ul {
+  display: flex;
 }
 
 .contenedor {
