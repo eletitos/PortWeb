@@ -1,12 +1,20 @@
-
-.barra-superior{
-    overflow: hidden;
+.fondo-barra{
     background: $colorFondo;
     height: $margenCuadro;
     position: fixed;
     top:0;
+    width: 100%; 
+    z-index: $zIndexFondoBarra;
+}
+
+.contenedor-iconos{
+   // overflow: hidden;
+    background: transparent;
+    height: $margenCuadro;
+    position: fixed;
+    top:0;
     width: 100%;
-    z-index: 10;
+    z-index: $zIndexContenedorIconos;
     
 }
 
@@ -15,6 +23,7 @@
     width: $margenCuadro;
     height: $margenCuadro;
     svg{width:100%}       //tamaño del logo dentro de la caja
+    z-index: 120;
 }
 
 .contenedor-menu{
@@ -32,6 +41,10 @@ svg line{
     transform-origin: 50% 50%;
   
   }
+
+  
+svg #aro{fill:none; stroke: $colorFuente; stroke-width:12px;}
+svg #bola-ojo{fill: $colorFuente}
 
 
 

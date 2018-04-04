@@ -1,0 +1,23 @@
+@media screen and (max-width:500px){
+   
+    .contenedor{
+        width: 100%;
+    }
+    .tags,
+    .ajuste-pie{
+        display: none !important;
+    }
+    .barra-superior{
+        height: 12vw;
+        background: transparent;
+        overflow: visible;
+    }
+    .contenedor-{
+        &logo,
+        &menu{
+            width: 10vw;
+            height: auto;
+            margin: 1vw;
+        }
+    }
+}

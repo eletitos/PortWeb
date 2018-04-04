@@ -24,121 +24,143 @@
 
      <div class="flecha"></div>
     </div>
-
+    <header>
+        <input type="checkbox" name="menu-icon" id="menu-icon" class="ocultar">
         <div  class="barra-superior">
-            <a href="#" class="contenedor-logo">
-            
+            <div class="contenedor-iconos">
+
+                <a href="#" class="contenedor-logo">
                 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1,.cls-3{fill:#fff;}.cls-1{stroke:#2b2b2b;stroke-miterlimit:10;stroke-width:12px;}.cls-2{fill:#2b2b2b;}</style></defs><title>Logo</title><g id="logo"><circle id="aro" class="cls-1" cx="50" cy="50" r="38.3"/><circle id="bola-ojo" class="cls-2" cx="50" cy="66.4" r="21.5"/><circle id="brillo-ojo" class="cls-3" cx="60.1" cy="56.9" r="6.9"/><circle id="chico" class="cls-3" cx="20.6" cy="25.4" r="3.5"/></g></svg>  
-            </a>
-            <input type="checkbox" name="menu-icon" id="menu-icon" class="ocultar">
-            <label for="menu-icon" class="contenedor-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                    <title>menu icon</title>
-                    <line  class="arriba" x1="11.1" y1="31.3" x2="88.9" y2="31.3"/>
-                    <line  class="abajo" x1="11.1" y1="68.7" x2="88.9" y2="68.7"/>
-                    </svg>
-            </label>
-           
-            <header>
-                <div class="cortina-menu"></div>
-                <div class="cortina-menu"></div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">WORK.</a></li>
-                        <li><a href="#">MOTION.</a></li>
-                        <li><a href="#">PLAYING WITH PHOTOS.</a></li>
-                        <li><a href="#">DRAWING.</a></li>
-                        <li><a href="#">PATTERNS.</a></li>
-                        <li><a href="#">GENERATIVE EXPERIENCE.</a></li>
-                        <li>ABOUT.</li>
-                    </ul>
-                </nav>
-
-            </header>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <defs>
+                          <mask id= brillo-ojo>
+                            <rect fill="white" width="100" height="100"/>
+                            <circle fill="black" cx="60.1" cy="56.9" r="6.9"/>
+                          </mask>
+                          
+                         <mask id="brillo-pequeño">
+                          <rect fill="white" width="100" height="100"/>
+                          <circle fill="black"  cx="20.6" cy="25.4" r="3.5"/>
+                        </defs>
+                        <title>Logo</title>
+                        <g id="logo">
+                          <circle id="aro"  mask="url(#brillo-pequeño)" cx="50" cy="50" r="38.3"/>
+                          <circle id="bola-ojo" mask="url(#brillo-ojo)" cx="50" cy="66.4" r="21.5"/>
+                          </g></svg>  
+                </a>
+            
+                <label for="menu-icon" class="contenedor-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <title>menu icon</title>
+                        <line  class="arriba" x1="11.1" y1="31.3" x2="88.9" y2="31.3"/>
+                        <line  class="abajo" x1="11.1" y1="68.7" x2="88.9" y2="68.7"/>
+                        </svg>
+                </label>
+            </div>
+            <div class="fondo-barra"></div>
+        </div>  
+            
+        <div class="cortina-menu">
+            <div></div>
+            <div></div>
         </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html#work">WORK.</a></li>
+                <li><a href="#">MOTION.</a></li>
+                <li><a href="#">PLAYING WITH PHOTOS.</a></li>
+                <li><a href="#">DRAWING.</a></li>
+                <li><a href="p/patterns.html">PATTERNS.</a></li>
+                <li><a href="#">GENERATIVE EXPERIENCE.</a></li>
+                <li><button id="btn-about">ABOUT.</button> </li>
+            </ul>
+        </nav>
 
-
-
-
-
+    </header>
+        
 
 <main>
 
-    <div class="contenedor"  id="contenedor">
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/2.jpg" alt=""> <div class="cortina"></div> </div> </div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/3.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/1.gif" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/4.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/5.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/6.gif" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/7.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/8.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/9.jpg" alt=""> <div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/10.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/11.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/12.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/13.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/14.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/15.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/16.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/17.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/18.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/19.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/20.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/21.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/22.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/23.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/24.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/25.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/26.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/27.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/28.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/29.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/30.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/31.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/32.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/33.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/34.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/35.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/36.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/37.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/38.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/39.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/40.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/41.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/42.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/43.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/44.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/45.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/46.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/47.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/48.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/49.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/50.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/51.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/52.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/53.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/54.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/55.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/56.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/57.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/58.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/59.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/60.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/61.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/62.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/63.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/64.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/65.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/66.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/67.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/68.jpg" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/69.gif" alt=""><div class="cortina"></div> </div></div>
-        <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/70.jpg" alt=""><div class="cortina"></div> </div></div>
+    <section id="about">
+        <div class="cortina-roja"></div>
+    </section>
+    <section id=work>
 
-
-    </div>
+        <div class="contenedor"  id="contenedor">
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/2.jpg" alt=""> <div class="cortina"></div> </div> </div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/3.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/1.gif" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/4.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/5.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/6.gif" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/7.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/8.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/9.jpg" alt=""> <div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/10.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/11.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/12.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/13.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/14.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/15.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/16.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/17.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/18.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/19.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/20.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/21.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/22.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/23.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/24.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/25.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/26.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/27.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/28.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/29.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/30.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/31.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/32.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/33.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/34.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/35.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/36.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/37.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/38.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/39.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/40.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/41.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/42.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/43.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/44.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/45.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/46.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/47.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/48.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/49.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/50.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/51.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/52.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/53.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/54.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/55.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/56.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/57.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/58.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/59.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/60.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/61.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/62.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/63.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/64.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/65.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/66.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/67.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/68.jpg" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/69.gif" alt=""><div class="cortina"></div> </div></div>
+            <div class="imagen"> <div class="contenedor-cortina"> <img src="img/portfolio/70.jpg" alt=""><div class="cortina"></div> </div></div>
+        </div>
+    </section>
 </main>
 
 <div class="tags"></div>

@@ -1,0 +1,17 @@
+#about .cortina-roja{
+    position:fixed;
+    background: $colorAbout;
+    top:0;
+    bottom:0;
+    left:0vw;
+    width: 0%;
+    //right:100vw;
+    //height:30vw;
+    transition: all 0.7s ease;
+    transform-origin: top left;
+    z-index:$zIndexAbout;
+}
+
+.desplegado{
+    width: 100% !important;
+}

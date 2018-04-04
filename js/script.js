@@ -7,7 +7,6 @@ $(document).ready(function () {
     var anchoContenedor;
     var anchoColumnas;
     var arrayMinimos = [];
-    var contenedor = $('#contenedor');
     var imagen = $('.imagen');
     var cortinaBlanca;
     var primerScroll = true;
@@ -19,9 +18,10 @@ $(document).ready(function () {
     var aleatorio;
     var dispositivoMovil = false;
     var menuDesplegado = false;
+    var about = $('#btn-about');
    
     
-   $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'})
+   $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'});
    $('h1').show();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
@@ -39,10 +39,10 @@ $(document).ready(function () {
             arrayMinimos.pop(); 
         }
           // altoVentana = $(window).height();
+            alturaMenu();
             calcularColumnas();
             calculoPosicion();
-            alturaMenu();
-        });
+        }, );
 
        
         
@@ -59,16 +59,16 @@ $(document).ready(function () {
                 $(window).scrollTop(0);
                 $('.caja-cabecera').addClass('recogida');
                 $('.tags').addClass('tag-desplegado');
-                setTimeout(function () {  primerScroll = false}, 900) ;        
+                setTimeout(function () {  primerScroll = false;}, 900);        
             }
         }
-    })
+    });
 
 
-    $(window).on('touchstart', function () { 
+     /*  $(window).on('touchstart', function () { 
         dispositivoMovil = true;
         $(window).off('touchstart')
-     })
+     }) */
 
 
 
@@ -93,7 +93,7 @@ $(document).ready(function () {
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
         scrollPosition = $(window).scrollTop();
     
-    })
+    });
 
     imagen.click(function(){
         if(modoMosaico){
@@ -117,7 +117,12 @@ $(document).ready(function () {
         }
         console.log('mostrar Mosaico: ' + modoMosaico + 'numero aleatorio: ' + aleatorio);
 
-    })
+    });
+
+    about.on('click', function () { 
+        $('.cortina-roja').addClass('desplegado');
+        console.log('desplegado');
+     })
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
@@ -137,7 +142,7 @@ $(document).ready(function () {
             
             arrayMinimos[index] = minimo + $(this).outerHeight();       //Establezco la nueva altura de la columna
 
-         })
+         });
 
          var maximo = Math.max.apply(null, arrayMinimos);
          contenedor.css('height', maximo);
@@ -176,7 +181,7 @@ $(document).ready(function () {
         let alturaBarraSuperior = $('.barra-superior').height();
         let alturaFooter = $('.ajuste-pie').height();
         let alturaMaxima = alturaVentana - alturaBarraSuperior - alturaFooter;
-        let ancho = $('#contenedor').width();;
+        let ancho = $('#contenedor').width();
     
         $(selector).find('img').css({
             maxWidth: ancho + 'px',
@@ -190,8 +195,8 @@ $(document).ready(function () {
 
 //-------------FUNCIÓN CALCULO ALTURA MENÚ-----------------
 
-function alturaMenu() { 
-    let altoMenu = $('.cortina-menu').height();
+function alturaMenu() {                                 
+    let altoMenu = $('header nav').height();
     $('nav ul').css('height', altoMenu+'px');
     console.log('la altura del menú es '+ altoMenu + 'px');
  }

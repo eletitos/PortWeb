@@ -18,5 +18,5 @@
    "liveSassCompile.settings.generateMap": false,     //para no generar archivo map
    "liveSassCompile.settings.autoprefix": null,
    //"liveSassCompile.settings.showOutputWindow": true     //se va ejecutando en pantalla.
-
+ 
 }
