@@ -3,15 +3,91 @@
     background: $colorAbout;
     top:0;
     bottom:0;
-    left:0vw;
-    width: 0%;
-    //right:100vw;
-    //height:30vw;
+    left:-50vw;
+    right: 100vw;
     transition: all 0.7s ease;
-    transform-origin: top left;
     z-index:$zIndexAbout;
+    overflow: hidden;
 }
 
 .desplegado{
-    width: 100% !important;
+    right: 0vw !important;
+    animation: animaEntradaCortina 0.7s ease;
+}
+
+.replegado{
+    animation: animaSalidaCortina 0.7s ease;
+}
+
+#about .contenedor-redes svg .circulo{
+  fill: $colorFuente;
+}
+
+.iconos-redes{
+  width: $margenCuadro;
+  height: 100%;
+  margin: 0 2vw;
+  a{
+    padding: 5px;
+    width: 100%;
+    display: block;
+    svg{width: 100%; }
+  };
+  transition: transform 0.7s $curvaRebote;
+}
+
+.contenedor-redes .mostrar{         //transición para que se muestren los iconos
+  transform: translateY(-7vw);
+}
+
+
+
+.contenedor-redes{
+  position: fixed;
+  top: 100vh;
+  height: 7vw;
+  width: 100%;
+  margin: auto;
+  z-index: $zIndexIconosRedes;
+  margin: auto; 
+  display: flex;
+  justify-content: center;
+  
+}
+
+.texto-about{
+  //position: fixed;
+  background: turquoise;
+  //left: 0;
+  //right: 0;
+  color: $colorFondo;
+  padding: 20vh 20vw;
+  transform: none !important;
+}
+
+
+
+
+@keyframes animaEntradaCortina{
+    0%{
+      transform: skewX(0deg);
+    }
+    50%{
+      transform: skewX(-20deg);
+    }
+    100%{
+      transform: skewX(0deg);
+    }
+  }
+
+@keyframes animaSalidaCortina{
+    0%{
+      transform: skewX(0deg);
+    }
+    50%{
+      transform: skewX(20deg);
+    }
+    100%{
+      transform: skewX(0deg);
+    }
 }

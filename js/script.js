@@ -19,6 +19,7 @@ $(document).ready(function () {
     var dispositivoMovil = false;
     var menuDesplegado = false;
     var about = $('#btn-about');
+    var aboutDesplegado = false;
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'});
@@ -38,7 +39,6 @@ $(document).ready(function () {
         for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
             arrayMinimos.pop(); 
         }
-          // altoVentana = $(window).height();
             alturaMenu();
             calcularColumnas();
             calculoPosicion();
@@ -92,6 +92,12 @@ $(document).ready(function () {
 
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
         scrollPosition = $(window).scrollTop();
+        if(aboutDesplegado){
+            $('.cortina-roja').removeClass('desplegado');
+            $('.cortina-roja').addClass('replegado');
+            $('.iconos-redes').removeClass('mostrar');
+            aboutDesplegado = false;
+        }
     
     });
 
@@ -120,8 +126,10 @@ $(document).ready(function () {
     });
 
     about.on('click', function () { 
+        $('.cortina-roja').removeClass('replegado');
         $('.cortina-roja').addClass('desplegado');
-        console.log('desplegado');
+        $('.iconos-redes').addClass('mostrar');
+        aboutDesplegado = true;
      })
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/

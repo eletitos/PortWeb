@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><style>.circulo{fill:#222221}</style>
+
+<defs>
+    <mask id="facebook">
+    <rect fill="white" width="140" height="140"/>
+        <path d="M72.1 15.7h14.2v-14H72.1c-9.3 0-16.8 7.5-16.8 16.8v22.2H43.9v14h11.3v49.4h14V54.7h12v-14h-12V18.5c0-1.5 1.3-2.8 2.9-2.8z"/>
+    </mask>
+</defs>
+<circle mask="url(#facebook)" cx="70" cy="70" r="70" class="circulo"/></svg>
