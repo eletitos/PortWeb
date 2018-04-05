@@ -16,6 +16,8 @@
 }
 
 .replegado{
+   transition-delay: 1s !important;
+   animation-delay: 1s !important;
     animation: animaSalidaCortina 0.7s ease;
 }
 
@@ -33,7 +35,7 @@
     display: block;
     svg{width: 100%; }
   };
-  transition: transform 0.7s $curvaRebote;
+  transition: transform 0.7s $curvaRedes;
 }
 
 .contenedor-redes .mostrar{         //transición para que se muestren los iconos
@@ -52,12 +54,15 @@
   margin: auto; 
   display: flex;
   justify-content: center;
+  .instagram{transition-delay: 0.2s}
+  .facebook{transition-delay: 0.5s}
+  .behance{transition-delay: 0.8s}
   
 }
 
 .texto-about{
   //position: fixed;
-  background: turquoise;
+ // background: turquoise;
   //left: 0;
   //right: 0;
   color: $colorFondo;

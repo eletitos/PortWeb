@@ -374,6 +374,8 @@ input[type="checkbox"]:checked ~ nav ul {
 }
 
 .replegado {
+  transition-delay: 1s !important;
+  animation-delay: 1s !important;
   animation: animaSalidaCortina 0.7s ease;
 }
 
@@ -385,7 +387,7 @@ input[type="checkbox"]:checked ~ nav ul {
   width: 5vw;
   height: 100%;
   margin: 0 2vw;
-  transition: transform 0.7s cubic-bezier(0.67, 0.08, 0.25, 1.505);
+  transition: transform 0.7s cubic-bezier(0.55, -3, 0.55, 4);
 }
 
 .iconos-redes a {
@@ -414,8 +416,19 @@ input[type="checkbox"]:checked ~ nav ul {
   justify-content: center;
 }
 
+.contenedor-redes .instagram {
+  transition-delay: 0.2s;
+}
+
+.contenedor-redes .facebook {
+  transition-delay: 0.5s;
+}
+
+.contenedor-redes .behance {
+  transition-delay: 0.8s;
+}
+
 .texto-about {
-  background: turquoise;
   color: white;
   padding: 20vh 20vw;
   transform: none !important;
