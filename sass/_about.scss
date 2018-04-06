@@ -13,12 +13,14 @@
 .desplegado{
     right: 0vw !important;
     animation: animaEntradaCortina 0.7s ease;
+    &-texto{animation: animaSalidaCortina 0.7s ease; display:block}
 }
 
 .replegado{
    transition-delay: 1s !important;
    animation-delay: 1s !important;
     animation: animaSalidaCortina 0.7s ease;
+    &-texto{animation-delay: 1s !important; animation: animaEntradaCortina 0.7s ease;}
 }
 
 #about .contenedor-redes svg .circulo{
@@ -61,13 +63,13 @@
 }
 
 .texto-about{
-  //position: fixed;
- // background: turquoise;
-  //left: 0;
-  //right: 0;
   color: $colorFondo;
   padding: 20vh 20vw;
-  transform: none !important;
+  padding-left: 70vw;
+  font-size: 5vmin;
+  height: 100%;  
+  width: 150vw;
+  display:none;
 }
 
 

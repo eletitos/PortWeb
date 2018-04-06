@@ -94,7 +94,9 @@ $(document).ready(function () {
         scrollPosition = $(window).scrollTop();
         if(aboutDesplegado){
             $('.cortina-roja').removeClass('desplegado');
+            $('.texto-about').removeClass('desplegado-texto');
             $('.cortina-roja').addClass('replegado');
+            $('.texto-about').addClass('replegado-texto');
             $('.iconos-redes').removeClass('mostrar');
             aboutDesplegado = false;
         }
@@ -127,7 +129,9 @@ $(document).ready(function () {
 
     about.on('click', function () { 
         $('.cortina-roja').removeClass('replegado');
+        $('.texto-about').removeClass('replegado-texto');
         $('.cortina-roja').addClass('desplegado');
+        $('.texto-about').addClass('desplegado-texto');
         $('.iconos-redes').addClass('mostrar');
         aboutDesplegado = true;
      })

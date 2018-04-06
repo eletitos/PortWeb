@@ -55,11 +55,11 @@ input[type="checkbox"]:checked {        //Animaciones producidas cuando se pulsa
     }
     
     + .barra-superior label .arriba{
-        transform: rotate(45deg) translate(0%, 18.7%);
+        transform: rotate(45deg) translate(0%, 18.7%) ;
     }
     
     + .barra-superior label .abajo{
-        transform: rotate(-45deg) translate(0%, -18.7%);
+        transform: rotate(-45deg) translate(0%, -18.7%) ;
     }
 
     ~ nav{

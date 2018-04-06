@@ -121,6 +121,21 @@ svg #bola-ojo {
   fill: #2b2b2b;
 }
 
+/*.contenedor-menu:hover svg line{
+    &:first-child{animation: sacudida 0.2s 2 ease ;}
+    &:last-child{animation: sacudida 0.2s 2 ease reverse;}
+}
+
+#menu-icon:checked + .barra-superior .contenedor-menu:hover svg line{
+    animation: none;
+}
+
+@keyframes sacudida{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(10deg);}
+    75%{transform: rotate(-10deg)}
+    100%{transform: rotate(0deg)}
+}*/
 .caja-cabecera {
   height: 100vh;
   background: white;
@@ -373,10 +388,20 @@ input[type="checkbox"]:checked ~ nav ul {
   animation: animaEntradaCortina 0.7s ease;
 }
 
+.desplegado-texto {
+  animation: animaSalidaCortina 0.7s ease;
+  display: block;
+}
+
 .replegado {
   transition-delay: 1s !important;
   animation-delay: 1s !important;
   animation: animaSalidaCortina 0.7s ease;
+}
+
+.replegado-texto {
+  animation-delay: 1s !important;
+  animation: animaEntradaCortina 0.7s ease;
 }
 
 #about .contenedor-redes svg .circulo {
@@ -431,7 +456,11 @@ input[type="checkbox"]:checked ~ nav ul {
 .texto-about {
   color: white;
   padding: 20vh 20vw;
-  transform: none !important;
+  padding-left: 70vw;
+  font-size: 5vmin;
+  height: 100%;
+  width: 150vw;
+  display: none;
 }
 
 @keyframes animaEntradaCortina {
