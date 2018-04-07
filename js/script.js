@@ -20,13 +20,13 @@ $(document).ready(function () {
     var menuDesplegado = false;
     var about = $('#btn-about');
     var aboutDesplegado = false;
+    var altoMenu = $('header nav').height();
    
     
    $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'});
    $('h1').show();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
-    alturaMenu();
 
     for (let i = 0; i < datos.length; i++) {
         $('.cortina').eq(i).html('<h3 class="titulo">'+datos[i].titulo +'</h3>');
@@ -39,10 +39,9 @@ $(document).ready(function () {
         for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
             arrayMinimos.pop(); 
         }
-            alturaMenu();
             calcularColumnas();
             calculoPosicion();
-        }, );
+        });
 
        
         
@@ -72,14 +71,14 @@ $(document).ready(function () {
 
 
 
-    imagen.on('mouseover', function() {                             //Cortina negra cd pasa el ratón.
-        if(modoMosaico & !dispositivoMovil){
+    /*imagen.on('mouseover', function() {                             //Cortina negra cd pasa el ratón.
+      //  if(modoMosaico & !dispositivoMovil){
             $(this).find('.cortina').stop(true, false).slideDown();  //Función ejecutada cuando el ratón entra, en modo mosaico y si el dispositivo no es movil.
-        }
-        if(dispositivoMovil){
+        //}
+        /*if(dispositivoMovil){
             imagen.off('mouseover');
         }
-    });
+    }); 
 
     imagen.on('mouseleave', function() {
         $(this).find('.cortina').stop(true, false).slideUp(); //función ejecutada cuando el ratón sale.
@@ -87,7 +86,7 @@ $(document).ready(function () {
             imagen.off('mouseleave');
             console.log('mouseleave desactivado');
         }
-    });
+    });*/
 
 
     $('#menu-icon').on('change',function(){             //Evento que calcula la posición de scroll cd se presiona el menú
@@ -104,10 +103,10 @@ $(document).ready(function () {
     });
 
     imagen.click(function(){
+        $('.cortina').toggleClass('ocultar');
         if(modoMosaico){
             scrollPosition = $(window).scrollTop();
             imagen.not(this).addClass('ocultar');
-            $(this).find('.cortina').hide();
             aleatorio = Math.ceil(Math.random()*4);
             $(this).addClass('posicion-'+ aleatorio);
             tamañoMaximoFotos(this);
@@ -179,9 +178,6 @@ $(document).ready(function () {
         }
         anchoColumnas = 100/numeroColumnas;
         imagen.css('width', anchoColumnas + '%');
-        anchoContenedor = contenedor.width();
-        console.log('Ancho del contenedor = ' + anchoContenedor);
-        console.log('ancho columna = ' + anchoColumnas);
     }
     
 
@@ -189,30 +185,12 @@ $(document).ready(function () {
 //--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
 
     function tamañoMaximoFotos(selector) {
-        let alturaVentana = $(window).height();
-        let alturaBarraSuperior = $('.barra-superior').height();
-        let alturaFooter = $('.ajuste-pie').height();
-        let alturaMaxima = alturaVentana - alturaBarraSuperior - alturaFooter;
-        let ancho = $('#contenedor').width();
-    
+        let alturaMaxima = $('header nav').height();
         $(selector).find('img').css({
-            maxWidth: ancho + 'px',
+            maxWidth: anchoContenedor + 'px',
             maxHeight: alturaMaxima + 'px',
             width: 'auto'
         });
-
-
     }
-
-
-//-------------FUNCIÓN CALCULO ALTURA MENÚ-----------------
-
-function alturaMenu() {                                 
-    let altoMenu = $('header nav').height();
-    $('nav ul').css('height', altoMenu+'px');
-    console.log('la altura del menú es '+ altoMenu + 'px');
- }
-
-
 
 });

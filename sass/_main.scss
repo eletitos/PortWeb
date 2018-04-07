@@ -27,6 +27,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    &:hover .cortina{height: 100%}
 }
 
 .cortina{
@@ -34,10 +35,15 @@
     background: $colorFuente;
     color: $colorFondo;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    //display: none;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+   
 
     .titulo{
         float: right;
