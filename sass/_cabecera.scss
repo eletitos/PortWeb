@@ -4,6 +4,14 @@
     margin: 0;
     padding:0;
     transition: all 900ms $curvaRebote;
+    .contenedor-texto{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
   
 }
 
@@ -13,13 +21,10 @@
 
 h1{
     margin: 0;
-    padding: 20vh;
-    font-size: 8rem;
+    font-size: 10vmin;
     text-align: center;
     width: 100%;
     color: $colorFuente;
-    position: fixed; 
-    display:none; 
 }
 
 .flecha{

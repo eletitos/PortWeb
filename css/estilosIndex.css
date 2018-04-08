@@ -144,19 +144,25 @@ svg #bola-ojo {
   transition: all 900ms cubic-bezier(0.67, 0.08, 0.25, 1.505);
 }
 
+.caja-cabecera .contenedor-texto {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .recogida {
   height: 5vw;
 }
 
 h1 {
   margin: 0;
-  padding: 20vh;
-  font-size: 8rem;
+  font-size: 10vmin;
   text-align: center;
   width: 100%;
   color: #2b2b2b;
-  position: fixed;
-  display: none;
 }
 
 .flecha {

@@ -23,8 +23,7 @@ $(document).ready(function () {
     var altoMenu = $('header nav').height();
    
     
-   $('h1').fitText(1, {minFontSize: '16px', maxFontSize: '120px'});
-   $('h1').show();
+
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
 
