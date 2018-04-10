@@ -72,7 +72,7 @@
                 
             }
         }
-     })
+     });
 
   
      for (let i = 0; i < imagen.length; i++) {
@@ -89,7 +89,7 @@
             iconosRedes[i].classList.add('mostrar');  
         }
         aboutDesplegado = true;
-    })
+    });
 
 /*------------------FUNCIÓN DE CLICK EN LAS IMÁGENES--------------------*/
 

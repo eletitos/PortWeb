@@ -98,7 +98,7 @@ button {
 }
 
 #about .contenedor-redes svg .circulo {
-  fill: teal;
+  fill: #2b2b2b;
 }
 
 .iconos-redes {
@@ -180,7 +180,7 @@ button {
 }
 
 .cortina-menu div {
-  background-color: teal;
+  background-color: #2b2b2b;
   position: fixed;
   top: 5vw;
   bottom: 5vw;
@@ -285,7 +285,7 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
 
 svg line {
   fill: none;
-  stroke: teal;
+  stroke: #2b2b2b;
   stroke-width: 13px;
   transition: transform 0.5s cubic-bezier(0.67, 0.08, 0.25, 1.505);
   transform-origin: 50% 50%;
@@ -293,12 +293,12 @@ svg line {
 
 svg #aro {
   fill: none;
-  stroke: teal;
+  stroke: #2b2b2b;
   stroke-width: 12px;
 }
 
 svg #bola-ojo {
-  fill: teal;
+  fill: #2b2b2b;
 }
 
 /*.contenedor-menu:hover svg line{
