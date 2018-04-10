@@ -232,6 +232,10 @@ nav ul li a {
   color: white;
 }
 
+#menu-icon {
+  display: none;
+}
+
 input[type="checkbox"]:checked ~ .cortina-menu div {
   width: 90%;
 }
@@ -316,3 +320,33 @@ svg #bola-ojo {
     75%{transform: rotate(-10deg)}
     100%{transform: rotate(0deg)}
 }*/
+#contenedor {
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  padding-top: 5vh;
+}
+
+.row-children {
+  flex: 0 0 75%;
+  max-width: 700px;
+}
+
+.derecha {
+  flex-direction: row-reverse;
+}
+
+#work .row img {
+  width: 100%;
+}
+
+.absolute {
+  background: thistle;
+  transform: translateY(100px);
+}

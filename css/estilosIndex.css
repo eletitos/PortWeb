@@ -228,6 +228,10 @@ nav ul li a {
   color: white;
 }
 
+#menu-icon {
+  display: none;
+}
+
 input[type="checkbox"]:checked ~ .cortina-menu div {
   width: 90%;
 }
