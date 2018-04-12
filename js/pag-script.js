@@ -23,7 +23,23 @@ var cortina = document.querySelectorAll('.cortina');
 var cortinaRoja = document.querySelector('.cortina-roja');
 var iconosRedes = document.querySelectorAll('.iconos-redes');
 var textoAbout =  document.querySelector('.texto-about');
+var imagenesWork = document.querySelectorAll('#work img');
+var cajasImagenes = document.querySelectorAll('#work .absolute');
+var texto = document.querySelector('#work .texto');
+var posicionBottomImagen;
+var posicionTopImagen;
 
+
+imagenesWork.forEach(function (v, i) {
+    posicionTopImagen = imagenesWork[i].getBoundingClientRect().top;
+    if (posicionTopImagen>0 && posicionTopImagen<altoVentana) {
+        imagenesWork[i].classList.add('cambio-opacidad');
+    }
+});
+
+window.addEventListener('resize', function () {
+    altoVentana = window.innerHeight;
+});
 
 
 about.addEventListener('click', function(){
@@ -47,4 +63,36 @@ botonMenu.addEventListener('change',function () {
         }
     }
  });
+
+window.addEventListener('scroll', funcionScroll);
  
+
+function funcionScroll() {
+
+    desplazamientoImagenes();
+    desplazamientoTexto();
+}
+
+/*------------- FUNCIÓN DESPLAZAMIENTO IMÁGENES---------------------*/
+function desplazamientoImagenes() {
+    for (let i = 0; i < imagenesWork.length; i++) {
+        posicionTopImagen = imagenesWork[i].getBoundingClientRect().top;
+        posicionBottomImagen = imagenesWork[i].getBoundingClientRect().bottom;
+        if(posicionBottomImagen < 0){
+            cajasImagenes[i].style.transform = 'translateY(-125px)'
+        }else if (posicionTopImagen>altoVentana) {
+            cajasImagenes[i].style.transform = 'translateY(125px)'
+        }else{
+            cajasImagenes[i].style.transform = 'translateY(0)'
+            imagenesWork[i].classList.add('cambio-opacidad');
+        }
+    }
+
+}
+
+/*--------------FUNCIÓN DESPLAZAMIENTO TEXTO-----------------------*/
+
+function desplazamientoTexto() {
+    var posicionScroll = window.scrollY;
+    texto.style.transform = 'translateY(' + posicionScroll/1.4 + 'px)'
+}

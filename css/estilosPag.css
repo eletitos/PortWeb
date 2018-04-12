@@ -321,32 +321,83 @@ svg #bola-ojo {
     100%{transform: rotate(0deg)}
 }*/
 #contenedor {
-  max-width: 1500px;
+  max-width: 1300px;
   width: 90%;
   margin: 0 auto;
+  margin-top: 50vh;
+  margin-bottom: 25vh;
   padding: 0;
 }
 
 .row {
   display: flex;
   width: 100%;
+  padding-top: 7vh;
+}
+
+.row-doble {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   padding-top: 5vh;
 }
 
-.row-children {
+.row .row-children {
   flex: 0 0 75%;
-  max-width: 700px;
+  max-width: 900px;
+}
+
+.row-doble .row-children {
+  flex: 0 0 48%;
 }
 
 .derecha {
   flex-direction: row-reverse;
 }
 
-#work .row img {
-  width: 100%;
+#work .texto {
+  position: absolute;
+  font-size: 5vmin;
+  color: #2b2b2b;
+  top: 10vh;
+  width: 60vw;
+  right: 5vw;
+  font-weight: 600;
+  z-index: 10;
+}
+
+#work .texto p {
+  text-align: right;
+}
+
+#work img {
+  opacity: 0;
+}
+
+.cambio-opacidad {
+  animation: cambioOpacidad 2s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.abajo {
+  margin-top: 27vw;
 }
 
 .absolute {
   background: thistle;
-  transform: translateY(100px);
+  transition: 0.5s ease-in-out;
+}
+
+.mover {
+  transform: translateY(-100px);
+}
+
+@keyframes cambioOpacidad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
