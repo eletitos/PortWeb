@@ -376,7 +376,7 @@ svg #bola-ojo {
 }
 
 .cambio-opacidad {
-  animation: cambioOpacidad 2s 0.5s;
+  animation: cambioOpacidad 1.5s 0.3s;
   animation-fill-mode: forwards;
 }
 
@@ -384,8 +384,12 @@ svg #bola-ojo {
   margin-top: 27vw;
 }
 
+.vertical .row-children {
+  flex: 0 0 48%;
+}
+
 .absolute {
-  background: thistle;
+  background: #EFEECC;
   transition: 0.5s ease-in-out;
 }
 
