@@ -51,6 +51,7 @@
 
 #work img{
     opacity: 0;
+    vertical-align: bottom;
     @at-root .cambio-opacidad{
         animation: cambioOpacidad 1.5s 0.3s;
         animation-fill-mode: forwards;

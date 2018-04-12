@@ -64,14 +64,11 @@ botonMenu.addEventListener('change',function () {
     }
  });
 
-window.addEventListener('scroll', funcionScroll);
- 
-
-function funcionScroll() {
-
+window.addEventListener('scroll', function () { 
     desplazamientoImagenes();
     desplazamientoTexto();
-}
+ });
+ 
 
 /*------------- FUNCIÓN DESPLAZAMIENTO IMÁGENES---------------------*/
 function desplazamientoImagenes() {
@@ -93,6 +90,14 @@ function desplazamientoImagenes() {
 /*--------------FUNCIÓN DESPLAZAMIENTO TEXTO-----------------------*/
 
 function desplazamientoTexto() {
-    var posicionScroll = window.scrollY;
-    texto.style.transform = 'translateY(' + posicionScroll/1.4 + 'px)'
+    var scroll = window.scrollY;
+    texto.style.transform = 'translateY(' + scroll/1.4 + 'px)'
+}
+
+//--------FUNCIÓN BLOQUEO DEL SCROLL---------
+
+function bloqueoScroll() {
+    if(menuDesplegado){
+        window.scrollTo()
+    }
 }

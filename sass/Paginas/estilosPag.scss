@@ -2,13 +2,13 @@ $tipografia: 'Lato', sans-serif;
 $margenCuadro: 5vw;
 //$margenResponsive: 10vw;
 $anchoContenedor: 100% - 2*$margenCuadro/1vw*1%;
-$colorFuente:  rgb(43, 43, 43);;
-$colorCabecera: white;
+$colorFuente:  rgb(43, 43, 43);
 $curvaRebote: cubic-bezier(0.670, 0.080, 0.250, 1.505);
 $curvaRedes:cubic-bezier(.55,-3,.55,4);
 $colorFondo: rgb(255, 255, 255);
 $colorAbout: #F14553;
 $colorSecundario:#EFEECC;
+$colorTextoMenu: $colorFuente;
 
 //Z-index de capas fijas y absolutas:
 $zIndexContenedorIconos: 100;
@@ -24,3 +24,5 @@ $zIndexIconosRedes: 45;
 @import '../_menu.scss';
 @import '../_barraSuperior.scss';
 @import 'pagMain';
+@import 'sobrescritos'
+

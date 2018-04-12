@@ -220,7 +220,7 @@ nav ul li {
   padding: 0.1em;
 }
 
-nav ul li:nth-child(6) {
+nav ul li:nth-child(7) {
   flex: 1;
 }
 
@@ -373,6 +373,7 @@ svg #bola-ojo {
 
 #work img {
   opacity: 0;
+  vertical-align: bottom;
 }
 
 .cambio-opacidad {
@@ -404,4 +405,30 @@ svg #bola-ojo {
   to {
     opacity: 1;
   }
+}
+
+.cortina-menu div {
+  top: 0;
+  bottom: 0;
+  background: #EFEECC;
+}
+
+.cortina-menu div:nth-of-type(2) {
+  left: 0;
+}
+
+.cortina-menu div:nth-of-type(1) {
+  right: 0;
+}
+
+nav ul {
+  padding: 6vw;
+}
+
+nav ul li a {
+  color: #2b2b2b;
+}
+
+nav ul button {
+  color: #2b2b2b;
 }
