@@ -45,6 +45,13 @@ img {
   height: auto;
 }
 
+video {
+  width: 100%;
+  vertical-align: top;
+  height: auto;
+  border-style: none;
+}
+
 button {
   overflow: visible;
   border: 0;

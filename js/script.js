@@ -26,6 +26,7 @@
     var cortinaRoja = document.querySelector('.cortina-roja');
     var iconosRedes = document.querySelectorAll('.iconos-redes');
     var textoAbout =  document.querySelector('.texto-about');
+    var imgn;
     
    
     
@@ -37,6 +38,7 @@
         cortina[i].innerHTML = '<h3 class="titulo">'+datos[i].titulo +'</h3>';
 
     }
+
     
 /*------------------------EVENTOS----------------------------------------*/  
 
@@ -116,10 +118,10 @@ function clickImagen() {
            }
        }
        this.classList.remove('posicion-'+ aleatorio);
-       let estiloImagen = this.querySelector('img');
-       estiloImagen.style.maxWidth = '';
-       estiloImagen.style.maxHeight = '';
-       estiloImagen.style.width = '100%';
+       //let estiloImagen = this.querySelector(imgn);
+       imgn.style.maxWidth = '';
+       imgn.style.maxHeight = '';
+       imgn.style.width = '100%';
        modoMosaico = !modoMosaico;
     }
 }
@@ -131,14 +133,14 @@ function clickImagen() {
         arrayMinimos.push(0); 
     };
 
-    for (let i = 0; i < imagen.length; i++) {
+for (let i = 0; i < imagen.length; i++) {
         var minimo = Math.min.apply(null, arrayMinimos);    //Se determina la altura de la columna más corta (coordenada Y)
         var index = arrayMinimos.indexOf(minimo);  //determina qué columna es
         var posicionEjeX = index*anchoColumnas*anchoContenedor/100;    //Cálculo de la coordenada X
         imagen[i].style.left = posicionEjeX + 'px';  //fija coordenada X
         imagen[i].style.top = minimo + 'px';         //fija coordenada Y
         arrayMinimos[index] = minimo + imagen[i].offsetHeight;  //establece nueva altura de la columna
-    }
+    }    
     var maximo = Math.max.apply(null, arrayMinimos);
     contenedor.style.height = maximo + 'px';           //fijo altura del contenedor.
 
@@ -172,9 +174,10 @@ function clickImagen() {
 
     function tamañoMaximoFotos(selector) {
         let alturaMaxima = menu.offsetHeight;
-        selector.querySelector('img').style.maxWidth = anchoContenedor + 'px';
-        selector.querySelector('img').style.maxHeight = alturaMaxima + 'px';
-        selector.querySelector('img').style.width = 'auto';
+        imgn = selector.querySelector('video') || selector.querySelector('img');
+        imgn.style.maxWidth = anchoContenedor + 'px';
+        imgn.style.maxHeight = alturaMaxima + 'px';
+        imgn.style.width = 'auto';
     }
 
 //});

@@ -171,7 +171,7 @@ var jsonDatos = [
        "nombre": "img22",
        "numero": 22,
        "titulo": "¿FRIGODEDO O FRIGOPIÉ?",
-       "archivo": "22.gif",
+       "archivo": "22.mp4",
        "clases": "animation digital illustration",
        "menu": "motion"
     },
