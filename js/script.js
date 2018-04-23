@@ -20,9 +20,8 @@
     var menuDesplegado = false;
     var about = document.getElementById('btn-about');
     var aboutDesplegado = false;
-    //var altoMenu = document.querySelector('header nav').offsetHeight;
     var menu = document.querySelector('header nav');
-    var cortina 
+    var cortina;            //variable creada cd se crea la galería
     var cortinaRoja = document.querySelector('.cortina-roja');
     var iconosRedes = document.querySelectorAll('.iconos-redes');
     var textoAbout =  document.querySelector('.texto-about');
@@ -49,6 +48,15 @@
             calculoPosicion();
     });
 
+    window.addEventListener('touchstart', function () { 
+        dispositivoMovil = true;
+        cortina.forEach(function(val){
+            val.classList.add('ocultar');
+            console.log('dispositivo movil');
+        })
+
+     })
+
     window.addEventListener('scroll', function () { 
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             //window.scrollY=scrollPosition;
@@ -63,7 +71,15 @@
                 setTimeout(function () {  primerScroll = false;}, 900);
             }
         }
-     });        
+     });     
+     
+     
+    window.addEventListener('touchmove', function () {
+        if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
+            //window.scrollY=scrollPosition;
+            window.scrollTo(0, scrollPosition);
+        }
+    });
            
     botonMenu.addEventListener('change',function () { 
         scrollPosition = window.scrollY;
@@ -97,7 +113,9 @@
 /*------------------FUNCIÓN DE CLICK EN LAS IMÁGENES--------------------*/
 
 function clickImagen() {
-    this.querySelector('.cortina').classList.toggle('ocultar');
+    if(!dispositivoMovil){
+        this.querySelector('.cortina').classList.toggle('ocultar');
+    }
     if(modoMosaico){
        scrollPosition = window.scrollY;
        for (let j = 0; j < imagen.length; j++) {

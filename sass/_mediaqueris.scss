@@ -8,16 +8,39 @@
         display: none !important;
     }
     .barra-superior{
-        height: 12vw;
+        height: 14vw;
         background: transparent;
         overflow: visible;
     }
     .contenedor-{
         &logo,
         &menu{
-            width: 10vw;
+            width: 12vw;
             height: auto;
             margin: 1vw;
+        }
+        &iconos{
+            height: auto;
+        }
+    }
+    .recogida{
+        height: 0;
+    }
+    .fondo-barra{
+        display: none;
+    }
+
+    .cortina-menu div{
+        top: $margenResponsive;
+        bottom: $margenResponsive;
+        &:nth-of-type(2){left: $margenResponsive};
+        &:nth-of-type(1){right: $margenResponsive};
+    }
+
+    input[type="checkbox"]:checked {        //Animaciones producidas cuando se pulsa menú
+    
+        ~ .cortina-menu div{
+        width: 100vw-2*$margenResponsive;
         }
     }
 }

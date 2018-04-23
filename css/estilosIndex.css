@@ -267,11 +267,6 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   overflow: hidden;
 }
 
-/*.imagen img{
-    vertical-align: top;
-    width: 100%;
-
-}*/
 .contenedor-cortina {
   position: relative;
   width: 100%;
@@ -368,14 +363,36 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
     display: none !important;
   }
   .barra-superior {
-    height: 12vw;
+    height: 14vw;
     background: transparent;
     overflow: visible;
   }
   .contenedor-logo, .contenedor-menu {
-    width: 10vw;
+    width: 12vw;
     height: auto;
     margin: 1vw;
+  }
+  .contenedor-iconos {
+    height: auto;
+  }
+  .recogida {
+    height: 0;
+  }
+  .fondo-barra {
+    display: none;
+  }
+  .cortina-menu div {
+    top: 14vw;
+    bottom: 14vw;
+  }
+  .cortina-menu div:nth-of-type(2) {
+    left: 14vw;
+  }
+  .cortina-menu div:nth-of-type(1) {
+    right: 14vw;
+  }
+  input[type="checkbox"]:checked ~ .cortina-menu div {
+    width: 72vw;
   }
 }
 
