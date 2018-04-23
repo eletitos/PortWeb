@@ -43,7 +43,7 @@ var jsonDatos = [
        "nombre": "img6",
        "numero": 6,
        "titulo": "OLEADA",
-       "archivo": "6.gif",
+       "archivo": "6.mp4",
        "clases": "animation illlustration digital",
        "menu": "motion"
     },
@@ -115,7 +115,7 @@ var jsonDatos = [
        "nombre": "img15",
        "numero": 15,
        "titulo": "SE BUSCAN",
-       "archivo": "15.gif",
+       "archivo": "15.mp4",
        "clases": "animation photo",
        "menu": "motion"
     },
@@ -139,7 +139,7 @@ var jsonDatos = [
        "nombre": "img18",
        "numero": 18,
        "titulo": "HOLA CARACOLA",
-       "archivo": "18.gif",
+       "archivo": "18.mp4",
        "clases": "generative geometry animation digital",
        "menu": "motion"
     },
@@ -195,7 +195,7 @@ var jsonDatos = [
        "nombre": "img25",
        "numero": 25,
        "titulo": "GUERNICA EN MOVIMIENTO I",
-       "archivo": "25.gif",
+       "archivo": "25.mp4",
        "clases": "animation digital",
        "menu": "motion"
     },
@@ -235,7 +235,7 @@ var jsonDatos = [
        "nombre": "img30",
        "numero": 30,
        "titulo": "A CUADROS",
-       "archivo": "30.gif",
+       "archivo": "30.mp4",
        "clases": "pattern animation digital geometry",
        "menu": "motion"
     },
@@ -323,7 +323,7 @@ var jsonDatos = [
        "nombre": "img41",
        "numero": 41,
        "titulo": "EN LA ESPIRAL",
-       "archivo": "41.gif",
+       "archivo": "41.mp4",
        "clases": "animation generative digital geometry",
        "menu": "motion"
     },
@@ -331,7 +331,7 @@ var jsonDatos = [
        "nombre": "img42",
        "numero": 42,
        "titulo": "GUERNICA EN MOVIMIENTO II",
-       "archivo": "42.gif",
+       "archivo": "42.mp4",
        "clases": "animation",
        "menu": "motion"
     },
@@ -339,7 +339,7 @@ var jsonDatos = [
        "nombre": "img43",
        "numero": 43,
        "titulo": "BLINDLESS",
-       "archivo": "42.jpg",
+       "archivo": "43.jpg",
        "clases": "photo",
        "menu": "motion"
     },
@@ -347,7 +347,7 @@ var jsonDatos = [
        "nombre": "img44",
        "numero": 44,
        "titulo": "YO, PAYASO",
-       "archivo": "45.jpg",
+       "archivo": "44.jpg",
        "clases": "drawing illustration",
        "menu": "drawing"
     },
@@ -355,7 +355,7 @@ var jsonDatos = [
        "nombre": "img45",
        "numero": 45,
        "titulo": "MUJER EN ROSA",
-       "archivo": "46.jpg",
+       "archivo": "45.jpg",
        "clases": "illustration digital geometry",
        "menu": "illustration"
     },
@@ -427,7 +427,7 @@ var jsonDatos = [
        "nombre": "img54",
        "numero": 54,
        "titulo": "BOWIE",
-       "archivo": "54.gif",
+       "archivo": "54.mp4",
        "clases": "animation digital ilustration",
        "menu": "motion"
     },
@@ -531,7 +531,7 @@ var jsonDatos = [
        "nombre": "img67",
        "numero": 67,
        "titulo": "BORU",
-       "archivo": "67.gif",
+       "archivo": "67.mp4",
        "clases": "photo animation",
        "menu": "photo"
     },

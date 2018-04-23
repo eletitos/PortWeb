@@ -1,13 +1,13 @@
 //
 
     var contenedor = document.getElementById('contenedor');
-    var numeroFotos = 70;
+    var numeroFotos = datos.length;
     var extension;
     var numeroColumnas;
     var anchoContenedor;
     var anchoColumnas;
     var arrayMinimos = [];
-    var imagen = document.querySelectorAll('.imagen');     //lista
+    var imagen      //lista
     var cortinaBlanca;
     var primerScroll = true;
     var numRueda= 1;
@@ -22,15 +22,16 @@
     var aboutDesplegado = false;
     //var altoMenu = document.querySelector('header nav').offsetHeight;
     var menu = document.querySelector('header nav');
-    var cortina = document.querySelectorAll('.cortina');
+    var cortina 
     var cortinaRoja = document.querySelector('.cortina-roja');
     var iconosRedes = document.querySelectorAll('.iconos-redes');
     var textoAbout =  document.querySelector('.texto-about');
     var imgn;
+    var caja;
     
    
     
-
+    crearGaleria();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
 
@@ -181,3 +182,25 @@ for (let i = 0; i < imagen.length; i++) {
     }
 
 //});
+
+//-------------FUNCIÓN DE CREACIÓN DE GALERÍA-----------------------------
+
+function crearGaleria() {
+    for (let i = 0; i < numeroFotos; i++) {
+        caja = document.createElement('div');
+        caja.className = 'imagen';
+        let archivo = datos[i].archivo;
+        let extension = archivo.split('.')[1];
+        let elemento;
+        if(extension==='mp4'){
+            elemento = `<video src="videos/video500px/${archivo}" loop autoplay></video>`
+        }else{
+            elemento = `<img src="img/portfolio/${archivo}" alt="">`
+        }
+
+        contenedor.appendChild(caja);
+        caja.innerHTML = `<div class="contenedor-cortina"> ${elemento} <div class="cortina"></div> </div>`
+    }
+    imagen = document.querySelectorAll('.imagen');
+    cortina = document.querySelectorAll('.cortina');
+}
