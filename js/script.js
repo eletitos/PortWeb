@@ -193,7 +193,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video src="videos/video500px/${archivo}" loop autoplay></video>`
+            elemento = `<video src="videos/video500px/${archivo}" loop muted autoplay></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }

@@ -23,17 +23,16 @@ var cortina = document.querySelectorAll('.cortina');
 var cortinaRoja = document.querySelector('.cortina-roja');
 var iconosRedes = document.querySelectorAll('.iconos-redes');
 var textoAbout =  document.querySelector('.texto-about');
-var imagenesWork = document.querySelectorAll('#work img');
 var cajasImagenes = document.querySelectorAll('#work .absolute');
 var texto = document.querySelector('#work .texto');
 var posicionBottomImagen;
 var posicionTopImagen;
 
 
-imagenesWork.forEach(function (v, i) {
-    posicionTopImagen = imagenesWork[i].getBoundingClientRect().top;
+cajasImagenes.forEach(function (v, i) {
+    posicionTopImagen = cajasImagenes[i].getBoundingClientRect().top;
     if (posicionTopImagen>0 && posicionTopImagen<altoVentana) {
-        imagenesWork[i].classList.add('cambio-opacidad');
+        cajasImagenes[i].children[0].classList.add('cambio-opacidad');
     }
 });
 
@@ -72,16 +71,16 @@ window.addEventListener('scroll', function () {
 
 /*------------- FUNCIÓN DESPLAZAMIENTO IMÁGENES---------------------*/
 function desplazamientoImagenes() {
-    for (let i = 0; i < imagenesWork.length; i++) {
-        posicionTopImagen = imagenesWork[i].getBoundingClientRect().top;
-        posicionBottomImagen = imagenesWork[i].getBoundingClientRect().bottom;
+    for (let i = 0; i < cajasImagenes.length; i++) {
+        posicionTopImagen = cajasImagenes[i].getBoundingClientRect().top;
+        posicionBottomImagen = cajasImagenes[i].getBoundingClientRect().bottom;
         if(posicionBottomImagen < 0){
             cajasImagenes[i].style.transform = 'translateY(-125px)'
         }else if (posicionTopImagen>altoVentana) {
             cajasImagenes[i].style.transform = 'translateY(125px)'
         }else{
             cajasImagenes[i].style.transform = 'translateY(0)'
-            imagenesWork[i].classList.add('cambio-opacidad');
+            cajasImagenes[i].children[0].classList.add('cambio-opacidad');
         }
     }
 

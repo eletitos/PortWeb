@@ -378,7 +378,7 @@ svg #bola-ojo {
   text-align: right;
 }
 
-#work img {
+#work img, #work video {
   opacity: 0;
   vertical-align: bottom;
 }
