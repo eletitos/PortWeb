@@ -29,14 +29,19 @@ nav{
             font-weight: 900;
             flex: 0;
             padding: 0.1em;
+            //cursor: url("img/iconos/pointer.svg"),  crosshair !important;
             &:nth-child(7){flex:1;}
         }
-        button{color:$colorFondo}
+        button{
+            color:$colorFondo;
+            cursor: $cursorPointer, pointer;
+        }
     }
 }
 
 nav ul li a{
     color: $colorFondo;
+    cursor: $cursorPointer,  pointer;
 
 }
 

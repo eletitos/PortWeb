@@ -28,6 +28,7 @@
 
     .contenedor-redes{
         height: $margenResponsive !important;
+        bottom: -14vw !important;
         .mostrar{transform: translateY(-$margenResponsive) !important}
     }
 

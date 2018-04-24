@@ -18,6 +18,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background: $colorFondo;
+    user-select: none;    //Para que no se seleccione nada.
   }
   
   
@@ -30,6 +31,7 @@ html {
   a {
     background-color: transparent;
     text-decoration: none;
+    cursor: $cursorPointer, pointer;
     
   }
   

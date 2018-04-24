@@ -27,20 +27,25 @@
         height: 0;
     }
     .fondo-barra{
-        display: none;
+        transition: all 0.3s ease-in-out;
+        height: 0;
     }
 
     .cortina-menu div{
         top: $margenResponsive;
-        bottom: $margenResponsive;
-        &:nth-of-type(2){left: $margenResponsive};
-        &:nth-of-type(1){right: $margenResponsive};
+        bottom: 0;
+        &:nth-of-type(2){left: 0};
+        &:nth-of-type(1){right: 0};
     }
 
     input[type="checkbox"]:checked {        //Animaciones producidas cuando se pulsa menú
     
         ~ .cortina-menu div{
         width: 100vw-2*$margenResponsive;
+        }
+
+        + .barra-superior .fondo-barra{
+            height: 14vw;
         }
     }
     .iconos-redes{
@@ -49,6 +54,7 @@
 
     .contenedor-redes{
         height: $margenResponsive !important;
+        bottom: -14vw !important;
         .mostrar{transform: translateY(-$margenResponsive) !important}
     }
 

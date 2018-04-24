@@ -10,6 +10,7 @@ var cortinaBlanca;
 var primerScroll = true;
 var numRueda= 1;
 var altoVentana = window.innerHeight;
+var anchoVentana = window.innerWidth;
 var botonMenu = document.getElementById('menu-icon');
 var scrollPosition = 0;
 var modoMosaico = true;
@@ -38,6 +39,7 @@ cajasImagenes.forEach(function (v, i) {
 
 window.addEventListener('resize', function () {
     altoVentana = window.innerHeight;
+    anchoVentana = window.innerWidth;
 });
 
 
@@ -101,8 +103,10 @@ function desplazamientoImagenes() {
 /*--------------FUNCIÓN DESPLAZAMIENTO TEXTO-----------------------*/
 
 function desplazamientoTexto() {
-    var scroll = window.scrollY;
-    texto.style.transform = 'translateY(' + scroll/1.4 + 'px)'
+    if(anchoVentana > 800){
+        var scroll = window.scrollY;
+        texto.style.transform = 'translateY(' + scroll/1.4 + 'px)';
+    }
 }
 
 //--------FUNCIÓN BLOQUEO DEL SCROLL---------

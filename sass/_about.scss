@@ -38,6 +38,7 @@
     svg{width: 100%; }
   };
   transition: transform 0.7s $curvaRedes;
+  cursor: $cursorPointer, pointer;
 }
 
 .contenedor-redes .mostrar{         //transición para que se muestren los iconos
@@ -48,7 +49,7 @@
 
 .contenedor-redes{
   position: fixed;
-  top: 100vh !important;
+  bottom: -7vw;
   height: 7vw;
   width: 100%;
   margin: auto;
@@ -69,6 +70,7 @@
   font-size: 5vmin;
   height: 100%;  
   width: 150vw;
+  user-select: all;
   //display:none;
 }
 
