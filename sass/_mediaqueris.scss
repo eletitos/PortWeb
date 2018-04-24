@@ -43,4 +43,13 @@
         width: 100vw-2*$margenResponsive;
         }
     }
+    .iconos-redes{
+        width: $margenResponsive !important;
+    }
+
+    .contenedor-redes{
+        height: $margenResponsive !important;
+        .mostrar{transform: translateY(-$margenResponsive) !important}
+    }
+
 }

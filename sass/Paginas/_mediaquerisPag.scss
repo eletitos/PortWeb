@@ -21,5 +21,15 @@
     nav ul{
         padding: 15vw;
     }
+
+    .iconos-redes{
+        width: $margenResponsive !important;
+    }
+
+    .contenedor-redes{
+        height: $margenResponsive !important;
+        .mostrar{transform: translateY(-$margenResponsive) !important}
+    }
+
    
 }

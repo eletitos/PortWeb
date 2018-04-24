@@ -63,7 +63,7 @@
         }else{
             arrayMinimos = [];      //inicializando array valores columna.
             calculoPosicion();
-            if(primerScroll){       //se establece animación primer scroll
+            if(primerScroll && numeroColumnas>1){       //se establece animación primer scroll
                 window.scrollTo(0, 0);
                 document.querySelector('.caja-cabecera').classList.add('recogida');
                 document.querySelector('.tags').classList.add('tag-desplegado');
@@ -73,7 +73,7 @@
      });     
      
      
-    document.body.addEventListener('touchmove', function (e) {
+    document.body.addEventListener('touchmove', function () {
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             //window.scrollY=scrollPosition;
             //e.preventDefault();
@@ -212,7 +212,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video src="videos/video500px/${archivo}" loop muted autoplay></video>`
+            elemento = `<video src="videos/video500px/${archivo}" loop muted autoplay playsinline><img src="img/portfolio/${i+1}.gif"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }

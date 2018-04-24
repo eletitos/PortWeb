@@ -131,7 +131,7 @@ button {
 
 .contenedor-redes {
   position: fixed;
-  top: 100vh;
+  top: 100vh !important;
   height: 7vw;
   width: 100%;
   margin: auto;
@@ -456,5 +456,14 @@ nav ul button {
   }
   nav ul {
     padding: 15vw;
+  }
+  .iconos-redes {
+    width: 14vw !important;
+  }
+  .contenedor-redes {
+    height: 14vw !important;
+  }
+  .contenedor-redes .mostrar {
+    transform: translateY(-14vw) !important;
   }
 }

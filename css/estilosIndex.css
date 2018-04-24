@@ -172,16 +172,6 @@ h1 {
   color: #2b2b2b;
 }
 
-.flecha {
-  width: 3px;
-  height: 10vh;
-  background: black;
-  margin: auto;
-  position: absolute;
-  top: 90vh;
-  left: 50vw;
-}
-
 .cortina-menu div {
   background-color: #2b2b2b;
   position: fixed;
@@ -394,6 +384,15 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   input[type="checkbox"]:checked ~ .cortina-menu div {
     width: 72vw;
   }
+  .iconos-redes {
+    width: 14vw !important;
+  }
+  .contenedor-redes {
+    height: 14vw !important;
+  }
+  .contenedor-redes .mostrar {
+    transform: translateY(-14vw) !important;
+  }
 }
 
 #about .cortina-roja {
@@ -456,7 +455,7 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
 
 .contenedor-redes {
   position: fixed;
-  top: 100vh;
+  top: 100vh !important;
   height: 7vw;
   width: 100%;
   margin: auto;
