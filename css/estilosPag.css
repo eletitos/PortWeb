@@ -339,7 +339,7 @@ svg #bola-ojo {
 .row {
   display: flex;
   width: 100%;
-  padding-top: 7vh;
+  padding-top: 4vw;
 }
 
 .row-doble {
@@ -347,7 +347,7 @@ svg #bola-ojo {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: 5vh;
+  padding-top: 5vw;
 }
 
 .row .row-children {
@@ -438,4 +438,23 @@ nav ul li a {
 
 nav ul button {
   color: #2b2b2b;
+}
+
+@media screen and (max-width: 500px) {
+  .barra-superior {
+    height: 14vw;
+    background: transparent;
+    overflow: visible;
+  }
+  .contenedor-logo, .contenedor-menu {
+    width: 12vw;
+    height: auto;
+    margin: 1vw;
+  }
+  .contenedor-iconos {
+    height: auto;
+  }
+  nav ul {
+    padding: 15vw;
+  }
 }

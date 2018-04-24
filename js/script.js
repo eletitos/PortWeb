@@ -52,7 +52,6 @@
         dispositivoMovil = true;
         cortina.forEach(function(val){
             val.classList.add('ocultar');
-            console.log('dispositivo movil');
         })
 
      })
@@ -74,11 +73,13 @@
      });     
      
      
-    window.addEventListener('touchmove', function () {
+    document.body.addEventListener('touchmove', function (e) {
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             //window.scrollY=scrollPosition;
-            window.scrollTo(0, scrollPosition);
-        }
+            //e.preventDefault();
+            //e.stopPropagation();
+            document.body.style.overflow = 'hidden';
+        }else{document.body.style.overflow = 'auto'}
     });
            
     botonMenu.addEventListener('change',function () { 

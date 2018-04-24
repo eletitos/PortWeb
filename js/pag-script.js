@@ -67,6 +67,15 @@ window.addEventListener('scroll', function () {
     desplazamientoImagenes();
     desplazamientoTexto();
  });
+
+ document.body.addEventListener('touchmove', function () {
+    if(botonMenu.checked){                          //Se fija el scroll si el menú está desplegado.
+        //window.scrollY=scrollPosition;
+        //e.preventDefault();
+        //e.stopPropagation();
+        document.body.style.overflow = 'hidden';
+    }else{document.body.style.overflow = 'auto'}
+});
  
 
 /*------------- FUNCIÓN DESPLAZAMIENTO IMÁGENES---------------------*/
@@ -81,6 +90,9 @@ function desplazamientoImagenes() {
         }else{
             cajasImagenes[i].style.transform = 'translateY(0)'
             cajasImagenes[i].children[0].classList.add('cambio-opacidad');
+            setTimeout(function () {  
+                cajasImagenes[i].style.background = 'transparent';
+            }, 1800);
         }
     }
 

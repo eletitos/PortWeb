@@ -9,6 +9,7 @@ $colorFondo: rgb(255, 255, 255);
 $colorAbout: #F14553;
 $colorSecundario:#EFEECC;
 $colorTextoMenu: $colorFuente;
+$margenResponsive: 14vw;
 
 //Z-index de capas fijas y absolutas:
 $zIndexContenedorIconos: 100;
@@ -24,5 +25,6 @@ $zIndexIconosRedes: 45;
 @import '../_menu.scss';
 @import '../_barraSuperior.scss';
 @import 'pagMain';
-@import 'sobrescritos'
+@import 'sobrescritos';
+@import 'mediaquerisPag';
 

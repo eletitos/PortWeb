@@ -1,0 +1,25 @@
+@media screen and (max-width:500px){
+   
+   
+    .barra-superior{
+        height: 14vw;
+        background: transparent;
+        overflow: visible;
+    }
+    .contenedor-{
+        &logo,
+        &menu{
+            width: 12vw;
+            height: auto;
+            margin: 1vw;
+        }
+        &iconos{
+            height: auto;
+        }
+    }
+
+    nav ul{
+        padding: 15vw;
+    }
+   
+}
