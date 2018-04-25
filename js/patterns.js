@@ -44,11 +44,24 @@ botonMenu.addEventListener('change',function () {
     }
  });
 
+ btnPattern.addEventListener('click', cambioPattern)
+
  //--------------FUNCIÓN CARGAR PATTERN--------------------
  function cargarPattern() {
      aleatorio= Math.floor(Math.random()*numeroPatterns);
      let patternInicio = patterns[aleatorio].archivo;
      contenedorPattern.style.background = `url(../img/patterns/${patternInicio})`;
     
+ }
+
+ //------------FUNCIÓN CAMBIAR PATTERN---------------------
+ function cambioPattern() {
+     if(aleatorio === numeroPatterns-1){
+         aleatorio = 0;
+     }else{
+         aleatorio += 1
+     }
+     let patternClick = patterns[aleatorio].archivo;
+     contenedorPattern.style.background = `url(../img/patterns/${patternClick})`;
 
  }

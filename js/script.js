@@ -27,6 +27,7 @@
     var textoAbout =  document.querySelector('.texto-about');
     var imgn;
     var caja;
+    var videos;
     
    
     
@@ -212,7 +213,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video src="videos/video500px/${archivo}" loop muted playsinline><img src="img/portfolio/${i+1}.gif"></video>`
+            elemento = `<video src="videos/video500px/${archivo}" autoplay loop muted playsinline><img src="img/portfolio/${i+1}.gif"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -222,6 +223,17 @@ function crearGaleria() {
     }
     imagen = document.querySelectorAll('.imagen');
     cortina = document.querySelectorAll('.cortina');
-    let videos = document.querySelectorAll('video');
-    videos.forEach(function(val){val.play()})
+    videos = document.querySelectorAll('video');
+
+    //// ESTA ÚLTIMA PARTE ES PARA COMPROBAR SU FUNCIONAMIENTO EN MOBILES SIN AUTOPLAY
+
+    setTimeout(function(){
+        videos.forEach(function(val, index){
+            let tiempo = videos[index].currentTime;
+            if(tiempo===0){
+                val.setAttribute('poster', 'img/iconos/logo.svg');
+            }
+        });
+    }, 1000);
+    //videos.forEach(function(val){val.play()})
 }
