@@ -6,14 +6,11 @@ var anchoContenedor;
 var anchoColumnas;
 var arrayMinimos = [];
 var imagen = document.querySelectorAll('.imagen');     //lista
-var cortinaBlanca;
 var primerScroll = true;
-var numRueda= 1;
 var altoVentana = window.innerHeight;
 var anchoVentana = window.innerWidth;
 var botonMenu = document.getElementById('menu-icon');
 var scrollPosition = 0;
-var modoMosaico = true;
 var aleatorio;
 var dispositivoMovil = false;
 var menuDesplegado = false;

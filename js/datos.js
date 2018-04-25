@@ -561,5 +561,26 @@ var jsonDatos = [
     }
  ]
 
+ var jsonPatterns = [
+     {
+         "numero": 1,
+         "titulo": "",
+         "archivo": "pattern1.jpg"
+     },
+     {
+        "numero": 2,
+        "titulo": "",
+        "archivo": "pattern2.jpg"
+    },
+    {
+        "numero": 3,
+        "titulo": "",
+        "archivo": "pattern3.gif"
+    },
+ ]
+
  var datostext = JSON.stringify(jsonDatos);
  var datos = JSON.parse(datostext);
+
+ var patternsText = JSON.stringify(jsonPatterns);
+ var patterns = JSON.parse(patternsText);
