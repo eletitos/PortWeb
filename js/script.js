@@ -1,5 +1,3 @@
-//
-
     var contenedor = document.getElementById('contenedor');
     var numeroFotos = datos.length;
     var extension;
@@ -214,7 +212,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop autoplay muted playsinline src="videos/video500px/${archivo}"></video>`
+            elemento = `<video loop muted autoplay playsinline src="videos/video500px/${archivo}"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -236,11 +234,17 @@ function crearGaleria() {
                 let srcPoster = `videos/video500px/poster/poster${numeroPoster}.jpg`
                 val.setAttribute('poster', srcPoster);
                 val.parentElement.insertAdjacentHTML('beforeend', playIcon);
-                val.parentElement.querySelector('.play-icon').addEventListener('click', function () { 
+                let botonPlay = val.parentElement.querySelector('.play-icon');
+                botonPlay.addEventListener('click', function (e) { 
+                    e.stopPropagation();
                     val.play();
+                    botonPlay.style.display ='none';
                  })
             }
         });
-    }, 1000);
+    }, 3000);
     //videos.forEach(function(val){val.play()})
 }
+
+
+videos[1].addEventListener('play', function () { console.log('video 1 has changed'); })
