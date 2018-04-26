@@ -1,0 +1,444 @@
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /*igual para otros navegadores */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /*elegir la familia de fuente que se quiere*/
+}
+
+body {
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  user-select: none;
+}
+
+h1, h2, p, ol, ul {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  cursor: url("../img/iconos/pointer.svg"), pointer;
+}
+
+main, li {
+  display: block;
+}
+
+img {
+  border-style: none;
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  vertical-align: top;
+  height: auto;
+  border-style: none;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+#about .cortina-roja {
+  position: fixed;
+  background: #F14553;
+  top: 0;
+  bottom: 0;
+  left: -50vw;
+  right: 100vw;
+  transition: all 0.7s ease;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.desplegado {
+  right: 0vw !important;
+  animation: animaEntradaCortina 0.7s ease;
+}
+
+.desplegado-texto {
+  animation: animaSalidaCortina 0.7s ease;
+  display: block;
+}
+
+.replegado {
+  transition-delay: 1s !important;
+  animation-delay: 1s !important;
+  animation: animaSalidaCortina 0.7s ease;
+}
+
+.replegado-texto {
+  animation-delay: 1s !important;
+  animation: animaEntradaCortina 0.7s ease;
+}
+
+#about .contenedor-redes svg .circulo {
+  fill: #2b2b2b;
+}
+
+.iconos-redes {
+  width: 5vw;
+  height: 100%;
+  margin: 0 2vw;
+  transition: transform 0.7s cubic-bezier(0.55, -3, 0.55, 4);
+  cursor: url("../img/iconos/pointer.svg"), pointer;
+}
+
+.iconos-redes a {
+  padding: 5px;
+  width: 100%;
+  display: block;
+}
+
+.iconos-redes a svg {
+  width: 100%;
+}
+
+.contenedor-redes .mostrar {
+  transform: translateY(-7vw);
+}
+
+.contenedor-redes {
+  position: fixed;
+  bottom: -7vw;
+  height: 7vw;
+  width: 100%;
+  margin: auto;
+  z-index: 45;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-redes .instagram {
+  transition-delay: 0.2s;
+}
+
+.contenedor-redes .facebook {
+  transition-delay: 0.5s;
+}
+
+.contenedor-redes .behance {
+  transition-delay: 0.8s;
+}
+
+.texto-about {
+  color: white;
+  padding: 20vh 20vw;
+  padding-left: 70vw;
+  font-size: 5vmin;
+  height: 100%;
+  width: 150vw;
+  user-select: all;
+}
+
+@keyframes animaEntradaCortina {
+  0% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(-20deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes animaSalidaCortina {
+  0% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.cortina-menu div {
+  background-color: #2b2b2b;
+  position: fixed;
+  top: 5vw;
+  bottom: 5vw;
+  width: 0vw;
+  z-index: 20;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+.cortina-menu div:nth-of-type(2) {
+  left: 4.8vw;
+}
+
+.cortina-menu div:nth-of-type(1) {
+  right: 4.8vw;
+}
+
+nav {
+  width: 90vw;
+  height: 100%;
+  margin: 0 !important;
+}
+
+nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+nav ul li {
+  font-size: 3vmax;
+  color: white;
+  font-weight: 900;
+  flex: 0;
+  padding: 0.1em;
+}
+
+nav ul li:nth-child(7) {
+  flex: 1;
+}
+
+nav ul button {
+  color: white;
+  cursor: url("../img/iconos/pointer.svg"), pointer;
+}
+
+nav ul li a {
+  color: white;
+  cursor: url("../img/iconos/pointer.svg"), pointer;
+}
+
+#menu-icon {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .cortina-menu div {
+  width: 90%;
+}
+
+input[type="checkbox"]:checked + .barra-superior label .arriba {
+  transform: rotate(45deg) translate(0%, 18.7%);
+}
+
+input[type="checkbox"]:checked + .barra-superior label .abajo {
+  transform: rotate(-45deg) translate(0%, -18.7%);
+}
+
+.fondo-barra {
+  background: white;
+  height: 5vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 35;
+}
+
+.contenedor-iconos {
+  background: transparent;
+  height: 5vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.contenedor-logo {
+  float: left;
+  width: 5vw;
+  height: 5vw;
+  z-index: 120;
+}
+
+.contenedor-logo svg {
+  width: 100%;
+}
+
+.contenedor-menu {
+  float: right;
+  width: 5vw;
+  height: 5vw;
+  cursor: url("../img/iconos/pointer.svg"), pointer;
+}
+
+.contenedor-menu svg {
+  width: 100%;
+}
+
+svg line {
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 13px;
+  transition: transform 0.5s cubic-bezier(0.67, 0.08, 0.25, 1.505);
+  transform-origin: 50% 50%;
+}
+
+svg #aro {
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 12px;
+}
+
+svg #bola-ojo {
+  fill: #2b2b2b;
+}
+
+.contenedor-principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-principal .mensaje {
+  font-size: 10vmin;
+  font-weight: 700;
+  text-align: center;
+  flex: 0 80%;
+  max-width: 1000px;
+  color: #2b2b2b;
+}
+
+.contenedor-principal .icono-under-construction {
+  width: 18%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.brillo-dcha {
+  animation: animaOjoDcho 1.5s ease-in-out infinite alternate;
+}
+
+.brillo-izq {
+  animation: animaOjoIzq 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes animaOjoIzq {
+  0% {
+    cx: 58.1;
+    cy: 63.7;
+  }
+  40% {
+    cx: 58.1;
+    cy: 63.7;
+  }
+  60% {
+    cx: 47.1;
+    cy: 61.7;
+  }
+  100% {
+    cx: 47.1;
+    cy: 61.7;
+  }
+}
+
+@keyframes animaOjoDcho {
+  0% {
+    cx: 116.1;
+    cy: 63.7;
+  }
+  40% {
+    cx: 116.1;
+    cy: 63.7;
+  }
+  60% {
+    cx: 105.1;
+    cy: 61.7;
+  }
+  100% {
+    cx: 105.1;
+    cy: 61.7;
+  }
+}
+
+.cortina-menu div {
+  top: 0;
+  bottom: 0;
+  background: #485866;
+}
+
+.cortina-menu div:nth-of-type(2) {
+  left: 0;
+}
+
+.cortina-menu div:nth-of-type(1) {
+  right: 0;
+}
+
+nav ul {
+  padding: 6vw;
+}
+
+nav ul li a {
+  color: #2b2b2b;
+}
+
+nav ul button {
+  color: #2b2b2b;
+}
+
+@media screen and (max-width: 500px) {
+  .barra-superior {
+    height: 14vw;
+    background: transparent;
+    overflow: visible;
+  }
+  .contenedor-logo, .contenedor-menu {
+    width: 12vw;
+    height: auto;
+    margin: 1vw;
+  }
+  .contenedor-iconos {
+    height: auto;
+  }
+  nav ul {
+    padding: 15vw;
+  }
+  .iconos-redes {
+    width: 14vw !important;
+  }
+  .contenedor-redes {
+    height: 14vw !important;
+    bottom: -14vw !important;
+  }
+  .contenedor-redes .mostrar {
+    transform: translateY(-14vw) !important;
+  }
+}

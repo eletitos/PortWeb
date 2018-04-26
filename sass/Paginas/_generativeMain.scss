@@ -1,0 +1,68 @@
+.contenedor-principal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mensaje{
+        font-size: 10vmin;
+        font-weight: 700;
+        text-align: center;
+        flex: 0 80%;
+        max-width: 1000px;
+        color: $colorFuente;
+    }
+    .icono-under-construction{
+        width: 18%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}
+
+.brillo-dcha{
+    animation: animaOjoDcho 1.5s ease-in-out infinite alternate;
+   
+}
+
+.brillo-izq{
+    animation: animaOjoIzq 1.5s ease-in-out infinite alternate;
+ 
+}
+
+@keyframes animaOjoIzq{
+    0%{
+        cx: 58.1;
+        cy:63.7;
+    }
+    40%{
+        cx: 58.1;
+        cy:63.7;  
+    }
+    60%{
+        cx: 47.1;
+        cy: 61.7;
+    }
+    100%{
+        cx: 47.1;
+        cy: 61.7;
+    }
+}
+
+@keyframes animaOjoDcho{
+    0%{
+        cx: 116.1;
+        cy:63.7;
+    }
+    40%{
+        cx: 116.1;
+        cy:63.7;
+    }
+    60%{
+        cx: 105.1;
+        cy: 61.7;
+    }
+    100%{
+        cx: 105.1;
+        cy: 61.7;
+    }
+}

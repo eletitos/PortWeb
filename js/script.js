@@ -213,7 +213,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video src="videos/video500px/${archivo}" autoplay loop muted playsinline><img src="img/portfolio/${i+1}.gif"></video>`
+            elemento = `<video autoplay loop muted playsinline><source src="videos/video500px/${archivo}"><img src="img/portfolio/${i+1}.gif"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -227,13 +227,13 @@ function crearGaleria() {
 
     //// ESTA ÚLTIMA PARTE ES PARA COMPROBAR SU FUNCIONAMIENTO EN MOBILES SIN AUTOPLAY
 
-    setTimeout(function(){
+/*     setTimeout(function(){
         videos.forEach(function(val, index){
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
                 val.setAttribute('poster', 'img/iconos/logo.svg');
             }
         });
-    }, 1000);
+    }, 1000); */
     //videos.forEach(function(val){val.play()})
 }
