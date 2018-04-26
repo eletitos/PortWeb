@@ -1,0 +1,27 @@
+<svg class= "mute-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.9 204.4"><style>.st0{fill:none;stroke:#000;stroke-width:40;stroke-miterlimit:10}</style><path d="M124 0L53 58.5v-.3H0v88h53v-.3l71 58.5z"/><path class="st0" d="M145.1 39.9l124.7 124.7M145.1 164.6L269.8 39.9"/></svg>
+
+
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="277.1px" height="248px" viewBox="0 0 277.1 248" style="enable-background:new 0 0 277.1 248;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:40;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<polygon points="124,12.9 53,71.4 53,71.1 0,71.1 0,159.1 53,159.1 53,158.8 124,217.3 "/>
+<path class="st0" d="M226,248"/>
+<g>
+	<path d="M223.7,0l-31.1,26.3c27,20.3,44.5,52.5,44.5,88.8c0,36.3-17.5,68.5-44.5,88.8l31.1,26.3c32.6-27.7,53.3-69,53.3-115.1
+		S256.3,27.7,223.7,0z"/>
+</g>
+<g>
+	<path d="M171.4,44.2l-33.5,28.3c18.7,5.2,32.4,22.3,32.4,42.6s-13.7,37.5-32.4,42.6l33.5,28.3c23.3-15,38.8-41.2,38.8-71
+		S194.7,59.2,171.4,44.2z"/>
+</g>
+</svg>
+
+<svg class="volum-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277.1 248"><path d="M124 12.9L53 71.4v-.3H0v88h53v-.3l71 58.5zM223.7 0l-31.1 26.3c27 20.3 44.5 52.5 44.5 88.8s-17.5 68.5-44.5 88.8l31.1 26.3c32.6-27.7 53.3-69 53.3-115.1S256.3 27.7 223.7 0z"/><path d="M171.4 44.2l-33.5 28.3c18.7 5.2 32.4 22.3 32.4 42.6s-13.7 37.5-32.4 42.6l33.5 28.3c23.3-15 38.8-41.2 38.8-71s-15.5-55.8-38.8-70.8z"/></svg>
+
+

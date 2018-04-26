@@ -564,19 +564,34 @@ var jsonDatos = [
  var jsonPatterns = [
      {
          "numero": 1,
-         "titulo": "",
+         "titulo": "eightees explosion",
          "archivo": "pattern1.jpg"
      },
      {
         "numero": 2,
-        "titulo": "",
+        "titulo": "Selvático",
         "archivo": "pattern2.jpg"
     },
     {
         "numero": 3,
-        "titulo": "",
+        "titulo": "A cuadros",
         "archivo": "pattern3.gif"
     },
+    {
+        "numero": 4,
+        "titulo": "Jazz",
+        "archivo": "pattern4.jpg"
+    },
+    {
+        "numero": 5,
+        "titulo": "Fantasía azul",
+        "archivo": "pattern5.jpg"
+    },
+    {
+        "numero": 6,
+        "titulo": "80's",
+        "archivo": "pattern6.gif"
+    }
  ]
 
  var datostext = JSON.stringify(jsonDatos);

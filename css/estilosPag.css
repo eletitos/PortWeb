@@ -411,6 +411,19 @@ svg #bola-ojo {
   }
 }
 
+.play-icon {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px calc(50% - 50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0.95;
+  cursor: pointer;
+}
+
 .cortina-menu div {
   top: 0;
   bottom: 0;
