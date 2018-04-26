@@ -384,6 +384,10 @@ svg #bola-ojo {
   margin-top: 27vw;
 }
 
+.margen-sup {
+  margin-top: 12vw;
+}
+
 .vertical .row-children {
   flex: 0 0 48%;
 }
@@ -391,6 +395,7 @@ svg #bola-ojo {
 .absolute {
   background: #EFEECC;
   transition: 0.5s ease-in-out;
+  position: relative;
 }
 
 .mover {

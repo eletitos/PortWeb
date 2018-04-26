@@ -60,6 +60,8 @@
 
 .abajo{margin-top: 27vw;}
 
+.margen-sup{margin-top: 12vw}
+
 .vertical .row-children{
     flex: 0 0 48%;
 }
@@ -67,6 +69,7 @@
 .absolute{
     background: $colorSecundario;
     transition: 0.5s ease-in-out; 
+    position: relative;
 }
 
 .mover{
