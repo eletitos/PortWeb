@@ -28,6 +28,7 @@
     var imgn;
     var caja;
     var videos;
+    var playIcon = '<svg class="play-icon" viewBox="0 0 200 200" alt="Play video"><circle cx="100" cy="100" r="100" fill="none" stroke-width="35" stroke="#fff"/><polygon points="70, 55 70, 145 145, 100" fill="#fff"/></svg>'
     
    
     
@@ -213,7 +214,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video autoplay loop muted playsinline><source src="videos/video500px/${archivo}"><img src="img/portfolio/${i+1}.gif"></video>`
+            elemento = `<video loop autoplay muted playsinline src="videos/video500px/${archivo}"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -227,13 +228,19 @@ function crearGaleria() {
 
     //// ESTA ÚLTIMA PARTE ES PARA COMPROBAR SU FUNCIONAMIENTO EN MOBILES SIN AUTOPLAY
 
-/*     setTimeout(function(){
+    setTimeout(function(){
         videos.forEach(function(val, index){
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
-                val.setAttribute('poster', 'img/iconos/logo.svg');
+                let numeroPoster = val.getAttribute('src').split('px/')[1].split('.')[0];
+                let srcPoster = `videos/video500px/poster/poster${numeroPoster}.jpg`
+                val.setAttribute('poster', srcPoster);
+                val.parentElement.insertAdjacentHTML('beforeend', playIcon);
+                val.parentElement.querySelector('.play-icon').addEventListener('click', function () { 
+                    val.play();
+                 })
             }
         });
-    }, 1000); */
+    }, 1000);
     //videos.forEach(function(val){val.play()})
 }
