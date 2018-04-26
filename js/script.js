@@ -212,7 +212,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop muted autoplay playsinline src="videos/video500px/${archivo}"></video>`
+            elemento = `<video loop muted playsinline src="videos/video500px/${archivo}"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -223,10 +223,11 @@ function crearGaleria() {
     imagen = document.querySelectorAll('.imagen');
     cortina = document.querySelectorAll('.cortina');
     videos = document.querySelectorAll('video');
+    videos.forEach(function(val){val.play()})
 
     //// ESTA ÚLTIMA PARTE ES PARA COMPROBAR SU FUNCIONAMIENTO EN MOBILES SIN AUTOPLAY
 
-    setTimeout(function(){
+ /*    setTimeout(function(){
         videos.forEach(function(val, index){
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
@@ -242,9 +243,9 @@ function crearGaleria() {
                  })
             }
         });
-    }, 3000);
+    }, 3000); */
     //videos.forEach(function(val){val.play()})
 }
 
 
-videos[1].addEventListener('play', function () { console.log('video 1 has changed'); })
+/* videos[1].addEventListener('play', function () { console.log('video 1 has changed'); }) */
