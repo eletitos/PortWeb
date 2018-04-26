@@ -38,8 +38,7 @@
         cortina[i].innerHTML = '<h3 class="titulo">'+datos[i].titulo +'</h3>';
 
     }
-
-    
+  
 /*------------------------EVENTOS----------------------------------------*/  
 
     window.addEventListener('resize', function(){
@@ -166,7 +165,6 @@ for (let i = 0; i < imagen.length; i++) {
 
   }
 
-
 /*   ------------------------------FUNCIÓN PARA CÁLCULO DE COLUMNAS--------------------------- */
 
     function calcularColumnas(){
@@ -187,9 +185,7 @@ for (let i = 0; i < imagen.length; i++) {
         console.log('el número de columnas es:' + numeroColumnas);
         console.log('el ancho del contenedor es' + anchoContenedor);
     }
-    
-
-
+ 
 //--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
 
     function tamañoMaximoFotos(selector) {
@@ -199,8 +195,6 @@ for (let i = 0; i < imagen.length; i++) {
         imgn.style.maxHeight = alturaMaxima + 'px';
         imgn.style.width = 'auto';
     }
-
-//});
 
 //-------------FUNCIÓN DE CREACIÓN DE GALERÍA-----------------------------
 
@@ -212,7 +206,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop muted playsinline src="videos/video500px/${archivo}"></video>`
+            elemento = `<video loop muted autoplay playsinline src="videos/video500px/${archivo}"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }
@@ -223,11 +217,13 @@ function crearGaleria() {
     imagen = document.querySelectorAll('.imagen');
     cortina = document.querySelectorAll('.cortina');
     videos = document.querySelectorAll('video');
-    videos.forEach(function(val){val.play()})
+    sinAutoplay();
+}
 
-    //// ESTA ÚLTIMA PARTE ES PARA COMPROBAR SU FUNCIONAMIENTO EN MOBILES SIN AUTOPLAY
+/* ----------------FUNCIÓN PARA DISPOSITIVOS SIN AUTOPLAY--------------------------- */
 
- /*    setTimeout(function(){
+function sinAutoplay() {
+    setTimeout(function(){
         videos.forEach(function(val, index){
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
@@ -239,13 +235,12 @@ function crearGaleria() {
                 botonPlay.addEventListener('click', function (e) { 
                     e.stopPropagation();
                     val.play();
-                    botonPlay.style.display ='none';
                  })
+                val.addEventListener('play', function(){
+                    botonPlay.style.display = 'none';
+                    console.log(`video ${index} eliminado`);
+                })
             }
         });
-    }, 3000); */
-    //videos.forEach(function(val){val.play()})
+    }, 1500);
 }
-
-
-/* videos[1].addEventListener('play', function () { console.log('video 1 has changed'); }) */
