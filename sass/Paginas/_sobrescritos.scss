@@ -1,9 +1,10 @@
 .cortina-menu div{
     top:0;
     bottom: 0;
-    background: $colorSecundario;
+    //background: $colorSecundario;
     &:nth-of-type(2){left: 0};
     &:nth-of-type(1){right: 0};
+
 }
 
 nav ul{
@@ -11,3 +12,11 @@ nav ul{
     li a{color: $colorTextoMenu}
     button{color: $colorTextoMenu}
 }
+
+.design{background: $colorDesign}
+.drawing{background: $colorDrawing}
+.illustration{background: $colorIllustration}
+.motion{background: $colorMotion}
+.photo{background: $colorPhoto}
+.generative{background: $colorGenerative}
+.patterns-background{background: $colorPatterns}

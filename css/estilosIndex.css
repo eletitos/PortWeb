@@ -161,7 +161,6 @@ h1 {
 }
 
 .cortina-menu div {
-  background-color: #2b2b2b;
   position: fixed;
   top: 5vw;
   bottom: 5vw;
@@ -177,6 +176,10 @@ h1 {
 
 .cortina-menu div:nth-of-type(1) {
   right: 4.8vw;
+}
+
+.home {
+  background: #2b2b2b;
 }
 
 nav {
@@ -400,6 +403,14 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   }
   .contenedor-redes .mostrar {
     transform: translateY(-14vw) !important;
+  }
+  nav ul {
+    padding: 1em;
+    padding-top: 7vw;
+    padding-bottom: 2em;
+  }
+  nav ul li {
+    padding: 0.2em;
   }
 }
 

@@ -67,9 +67,9 @@
 }
 
 .absolute{
-    background: $colorSecundario;
     transition: 0.5s ease-in-out; 
     position: relative;
+    @at-root .design{background: $colorDesign}
 }
 
 .mover{

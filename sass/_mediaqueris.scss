@@ -58,4 +58,12 @@
         .mostrar{transform: translateY(-$margenResponsive) !important}
     }
 
+    nav ul{
+        padding: 1em;
+        padding-top: $margenResponsive*0.5;
+        padding-bottom: 2em;
+        li{padding: 0.2em}
+
+    }
+
 }

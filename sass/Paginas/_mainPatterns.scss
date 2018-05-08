@@ -12,7 +12,7 @@
 .contenedor-patterns{
    
     height: 80%;
-    background: $colorSecundario;
+    //background: $colorSecundario;
     .pattern{
         background-position: center!important;
         background-position-y: top !important;
@@ -43,7 +43,7 @@
     transition: transform 0.3s;
     cursor: $cursorPointer, pointer;
     &:active{
-        color: $colorSecundario;
+        color: $colorPatterns;
         transform: scale(1.05)
     }
     

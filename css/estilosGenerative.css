@@ -191,7 +191,6 @@ button {
 }
 
 .cortina-menu div {
-  background-color: #2b2b2b;
   position: fixed;
   top: 5vw;
   bottom: 5vw;
@@ -207,6 +206,10 @@ button {
 
 .cortina-menu div:nth-of-type(1) {
   right: 4.8vw;
+}
+
+.home {
+  background: #2b2b2b;
 }
 
 nav {
@@ -393,7 +396,6 @@ svg #bola-ojo {
 .cortina-menu div {
   top: 0;
   bottom: 0;
-  background: #485866;
 }
 
 .cortina-menu div:nth-of-type(2) {
@@ -414,6 +416,34 @@ nav ul li a {
 
 nav ul button {
   color: #2b2b2b;
+}
+
+.design {
+  background: #e7e4d5;
+}
+
+.drawing {
+  background: #fac8c8;
+}
+
+.illustration {
+  background: #e9e9e9;
+}
+
+.motion {
+  background: #ceecef;
+}
+
+.photo {
+  background: #Fdffd9;
+}
+
+.generative {
+  background: #bba4c7;
+}
+
+.patterns-background {
+  background: #fcd1d8;
 }
 
 @media screen and (max-width: 500px) {
@@ -442,5 +472,13 @@ nav ul button {
   }
   .contenedor-redes .mostrar {
     transform: translateY(-14vw) !important;
+  }
+  nav ul {
+    padding: 1em;
+    padding-top: 21vw;
+    padding-bottom: 2em;
+  }
+  nav ul li {
+    padding: 0.2em;
   }
 }
