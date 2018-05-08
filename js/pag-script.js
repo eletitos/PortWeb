@@ -12,7 +12,6 @@ var anchoVentana = window.innerWidth;
 var botonMenu = document.getElementById('menu-icon');
 var scrollPosition = 0;
 var aleatorio;
-var dispositivoMovil = false;
 var menuDesplegado = false;
 var about = document.getElementById('btn-about');
 var aboutDesplegado = false;
@@ -26,7 +25,10 @@ var texto = document.querySelector('#work .texto');
 var posicionBottomImagen;
 var posicionTopImagen;
 var videos = document.querySelectorAll('video');
-var playIcon = '<svg class="play-icon" viewBox="0 0 200 200" alt="Play video"><circle cx="100" cy="100" r="100" fill="none" stroke-width="35" stroke="#fff"/><polygon points="70, 55 70, 145 145, 100" fill="#fff"/></svg>'
+var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
+var volIcon = '<svg class="vol-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.2 166.2"><path d="M89.5,9.3,38.3,51.6v-.2H0v63.5H38.3v-.2l51.3,42.2Z"/><path class="volumen ocultar" d="M161.5,0,139.1,19a80,80,0,0,1,0,128.2l22.5,19A109,109,0,0,0,161.5,0ZM123.8,31.9,99.6,52.3a31.9,31.9,0,0,1,0,61.5l24.2,20.4a60.8,60.8,0,0,0,0-102.4Z"/><polygon class="mute" points="188.8 138.3 154 103.5 119.2 138.3 98.8 117.9 133.6 83.1 98.8 48.3 119.2 27.9 154 62.7 188.8 27.9 209.2 48.3 174.4 83.1 209.2 117.9 188.8 138.3"/></svg>'
+var videoConSonido = document.querySelector('.sonido');
+var iconoVolumen;
 
 
 cajasImagenes.forEach(function (v, i) {
@@ -37,6 +39,7 @@ cajasImagenes.forEach(function (v, i) {
 });
 
 sinAutoplay();
+iconoSonido();
 
 window.addEventListener('resize', function () {
     altoVentana = window.innerHeight;
@@ -140,5 +143,24 @@ function sinAutoplay() {
                 })
             }
         });
-    }, 1500);
+    }, 3000);
+}
+
+
+/* ---------------FUNCIÓN AGREGAR ICONO VOL EN VIDEOS CON SONIDO ------------------ */
+
+function iconoSonido() {
+    if(videoConSonido){
+        videoConSonido.querySelector('video').addEventListener('play',function(){
+            videoConSonido.insertAdjacentHTML('beforeend', volIcon);
+            iconoVolumen = document.querySelector('.vol-icon');
+            let volumenInicial = false;
+            iconoVolumen.addEventListener('click', function () { 
+                videoConSonido.querySelector('video').muted = volumenInicial;
+                volumenInicial = !volumenInicial;
+                iconoVolumen.querySelector('.mute').classList.toggle('ocultar');
+                iconoVolumen.querySelector('.volumen').classList.toggle('ocultar');
+             })
+        })
+    } 
 }
