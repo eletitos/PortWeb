@@ -170,16 +170,29 @@ svg #bola-ojo {
   justify-content: center;
 }
 
+.caja-cabecera .flecha {
+  width: 6%;
+  height: auto;
+  position: fixed;
+  bottom: 1vh;
+  margin-left: 47%;
+}
+
 .recogida {
   height: 5vw;
 }
 
 h1 {
-  margin: 0;
+  margin: auto;
   font-size: 10vmin;
   text-align: center;
-  width: 100%;
+  width: 90%;
   color: #2b2b2b;
+}
+
+h1 .hola {
+  font-size: 15vmin;
+  font-weight: 900;
 }
 
 .cortina-menu div {
@@ -434,6 +447,9 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   nav ul li {
     padding: 0.2em;
   }
+  .flecha {
+    display: none;
+  }
 }
 
 #about .cortina-roja {
@@ -527,6 +543,15 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   height: 100%;
   width: 150vw;
   user-select: all;
+}
+
+.texto-about a {
+  color: #f7abb8;
+  font-weight: 900;
+}
+
+.texto-about .tags {
+  font-weight: 300;
 }
 
 .texto-about p .mail {

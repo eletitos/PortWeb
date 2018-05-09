@@ -71,7 +71,13 @@
   height: 100%;  
   width: 150vw;
   user-select: all;
-  //display:none;
+  a{
+    color: rgb(247, 171, 184);
+    font-weight: 900;
+  }
+  .tags{
+    font-weight: 300;
+  }
 }
 
 .texto-about p .mail{

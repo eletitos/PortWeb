@@ -12,6 +12,13 @@
         flex-direction: column;
         justify-content: center;
     }
+     .flecha{
+        width: 6%;
+        height: auto;
+        position: fixed;
+        bottom: 1vh;
+        margin-left: 47%;
+     }
   
 }
 
@@ -20,10 +27,14 @@
 }
 
 h1{
-    margin: 0;
+    margin: auto;
     font-size: 10vmin;
     text-align: center;
-    width: 100%;
+    width: 90%;
     color: $colorFuente;
+    .hola{
+        font-size: 15vmin;
+        font-weight: 900;
+    }
 }
 

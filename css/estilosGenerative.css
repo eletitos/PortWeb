@@ -188,6 +188,15 @@ a {
   user-select: all;
 }
 
+.texto-about a {
+  color: #f7abb8;
+  font-weight: 900;
+}
+
+.texto-about .tags {
+  font-weight: 300;
+}
+
 .texto-about p .mail {
   -moz-user-select: text !important;
   -ms-user-select: text !important;
