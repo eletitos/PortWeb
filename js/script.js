@@ -6,16 +6,12 @@
     var anchoColumnas;
     var arrayMinimos = [];
     var imagen      //lista
-    var cortinaBlanca;
     var primerScroll = true;
-    var numRueda= 1;
-    var altoVentana = window.innerHeight;
     var botonMenu = document.getElementById('menu-icon');
     var scrollPosition = 0;
     var modoMosaico = true;
     var aleatorio;
     var dispositivoMovil = false;
-    var menuDesplegado = false;
     var about = document.getElementById('btn-about');
     var aboutDesplegado = false;
     var menu = document.querySelector('header nav');
@@ -58,7 +54,6 @@
 
     window.addEventListener('scroll', function () { 
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
-            //window.scrollY=scrollPosition;
             window.scrollTo(0, scrollPosition);
         }else{
             arrayMinimos = [];      //inicializando array valores columna.
@@ -135,14 +130,11 @@ function clickImagen() {
        aleatorio = Math.ceil(Math.random()*4);
        this.classList.add('posicion-'+aleatorio);
        tamañoMaximoFotos(this);
-       console.log('modo mosaico es ' + modoMosaico);
        modoMosaico = !modoMosaico;                   //Alternar valor booleano
-       console.log('modo mosaico cambia a ' + modoMosaico);
     }else{
        for (let j = 0; j < imagen.length; j++) {
            if(imagen[j] != this){
                imagen[j].classList.remove('ocultar');
-               console.log('clase oculta');
            }
        }
        this.classList.remove('posicion-'+ aleatorio);
@@ -190,9 +182,6 @@ for (let i = 0; i < imagen.length; i++) {
         }
         anchoColumnas = 100/numeroColumnas;
         imagen.forEach(function (value, index) { imagen[index].style.width = anchoColumnas + '%' });
-
-        console.log('el número de columnas es:' + numeroColumnas);
-        console.log('el ancho del contenedor es' + anchoContenedor);
     }
  
 //--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
@@ -247,7 +236,6 @@ function sinAutoplay() {
                  })
                 val.addEventListener('play', function(){
                     botonPlay.style.display = 'none';
-                    console.log(`video ${index} eliminado`);
                 })
             }
         });
