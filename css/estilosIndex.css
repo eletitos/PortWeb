@@ -86,6 +86,14 @@ svg, h1, h2, body, p {
   user-select: none;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .fondo-barra {
   background: white;
   height: 5vw;
