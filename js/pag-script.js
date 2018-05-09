@@ -31,6 +31,7 @@ var videoConSonido = document.querySelector('.sonido');
 var iconoVolumen;
 
 
+document.oncontextmenu = function(){return false;}      //desactivar botón derecho.
 cajasImagenes.forEach(function (v, i) {
     posicionTopImagen = cajasImagenes[i].getBoundingClientRect().top;
     if (posicionTopImagen>0 && posicionTopImagen<altoVentana) {
@@ -82,6 +83,15 @@ window.addEventListener('scroll', function () {
         document.body.style.overflow = 'hidden';
     }else{document.body.style.overflow = 'auto'}
 });
+
+email.addEventListener('mouseenter', function(){
+    document.oncontextmenu = function(){return true;}  
+})
+
+email.addEventListener('mouseleave', function(){
+    document.oncontextmenu = function(){return false;}  
+})
+
  
 
 /*------------- FUNCIÓN DESPLAZAMIENTO IMÁGENES---------------------*/

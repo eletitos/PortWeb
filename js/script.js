@@ -23,13 +23,14 @@
     var cortinaRoja = document.querySelector('.cortina-roja');
     var iconosRedes = document.querySelectorAll('.iconos-redes');
     var textoAbout =  document.querySelector('.texto-about');
+    var email = document.querySelector('.texto-about').querySelector('.mail');
     var imgn;
     var caja;
     var videos;
-    var playIcon = '<svg class="play-icon" viewBox="0 0 200 200" alt="Play video"><circle cx="100" cy="100" r="100" fill="none" stroke-width="35" stroke="#fff"/><polygon points="70, 55 70, 145 145, 100" fill="#fff"/></svg>'
+    var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
     
    
-    
+    document.oncontextmenu = function(){return false;}      //desactivar botón derecho
     crearGaleria();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
@@ -109,6 +110,14 @@
         }
         aboutDesplegado = true;
     });
+
+    email.addEventListener('mouseenter', function(){
+        document.oncontextmenu = function(){return true;}  
+    })
+
+    email.addEventListener('mouseleave', function(){
+        document.oncontextmenu = function(){return false;}  
+    })
 
 /*------------------FUNCIÓN DE CLICK EN LAS IMÁGENES--------------------*/
 
@@ -206,7 +215,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop muted autoplay playsinline src="videos/video500px/${archivo}"></video>`
+            elemento = `<video loop autoplay muted playsinline src="videos/video500px/${archivo}"></video>`
         }else{
             elemento = `<img src="img/portfolio/${archivo}" alt="">`
         }

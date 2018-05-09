@@ -63,6 +63,7 @@ html {
     letter-spacing: inherit;
     background: none;
     cursor: pointer;
+    &:active{background: transparent; outline: none;}
   }
   ::-moz-focus-inner {
     padding: 0;
@@ -70,6 +71,13 @@ html {
   }
   :focus {
     outline: 0;
+    background: transparent;
   }
   
-  
+
+svg, h1, h2, body, p{
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

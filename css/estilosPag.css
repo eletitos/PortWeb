@@ -33,7 +33,7 @@ h1, h2, p, ol, ul {
 a {
   background-color: transparent;
   text-decoration: none;
-  cursor: url("../img/iconos/pointer.svg"), pointer;
+  cursor: url("../img/iconos/pointergrande.png"), pointer;
 }
 
 main, li {
@@ -64,6 +64,11 @@ button {
   cursor: pointer;
 }
 
+button:active {
+  background: transparent;
+  outline: none;
+}
+
 ::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -71,6 +76,14 @@ button {
 
 :focus {
   outline: 0;
+  background: transparent;
+}
+
+svg, h1, h2, body, p {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #about .cortina-roja {
@@ -115,7 +128,7 @@ button {
   height: 100%;
   margin: 0 2vw;
   transition: transform 0.7s cubic-bezier(0.55, -3, 0.55, 4);
-  cursor: url("../img/iconos/pointer.svg"), pointer;
+  cursor: url("../img/iconos/pointergrande.png"), pointer;
 }
 
 .iconos-redes a {
@@ -164,6 +177,25 @@ button {
   height: 100%;
   width: 150vw;
   user-select: all;
+}
+
+.texto-about p .mail {
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+.texto-about p .mail::selection {
+  background: rgba(247, 171, 184, 0.99);
+}
+
+.texto-about p .mail::-moz-selection {
+  background: rgba(247, 171, 184, 0.99);
+}
+
+.texto-about p .mail:hover {
+  cursor: url("../img/iconos/copiar-pointer.svg") 20 22, auto;
 }
 
 @keyframes animaEntradaCortina {
@@ -240,12 +272,12 @@ nav ul li:nth-child(7) {
 
 nav ul button {
   color: white;
-  cursor: url("../img/iconos/pointer.svg"), pointer;
+  cursor: url("../img/iconos/pointergrande.png"), pointer;
 }
 
 nav ul li a {
   color: white;
-  cursor: url("../img/iconos/pointer.svg"), pointer;
+  cursor: url("../img/iconos/pointergrande.png"), pointer;
 }
 
 #menu-icon {
@@ -297,7 +329,7 @@ input[type="checkbox"]:checked + .barra-superior label .abajo {
   float: right;
   width: 5vw;
   height: 5vw;
-  cursor: url("../img/iconos/pointer.svg"), pointer;
+  cursor: url("../img/iconos/pointergrande.png"), pointer;
 }
 
 .contenedor-menu svg {
