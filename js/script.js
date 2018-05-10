@@ -204,9 +204,9 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop autoplay muted playsinline src="videos/video500px/${archivo}"></video>`
+            elemento = `<video loop autoplay muted playsinline src="../videos/video500px/${archivo}"></video>`
         }else{
-            elemento = `<img src="img/portfolio/${archivo}" alt="">`
+            elemento = `<img src="../img/portfolio/${archivo}" alt="">`
         }
 
         contenedor.appendChild(caja);
@@ -226,7 +226,7 @@ function sinAutoplay() {
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
                 let numeroPoster = val.getAttribute('src').split('px/')[1].split('.')[0];
-                let srcPoster = `videos/video500px/poster/poster${numeroPoster}.jpg`
+                let srcPoster = `../videos/video500px/poster/poster${numeroPoster}.jpg`
                 val.setAttribute('poster', srcPoster);
                 val.parentElement.insertAdjacentHTML('beforeend', playIcon);
                 let botonPlay = val.parentElement.querySelector('.play-icon');
