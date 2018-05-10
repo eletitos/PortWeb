@@ -493,6 +493,12 @@ svg #bola-ojo {
   display: none;
 }
 
+.texto a {
+  color: #2b2b2b;
+  opacity: 0.9;
+  font-weight: 900;
+}
+
 .cortina-menu div {
   top: 0;
   bottom: 0;
