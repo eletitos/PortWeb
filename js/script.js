@@ -104,10 +104,10 @@
      });
 
   
-     for (let i = 0; i < imagen.length; i++) {
+   /*   for (let i = 0; i < imagen.length; i++) {
          imagen[i].addEventListener('click', clickImagen);  
      }
-
+ */
     
 
     about.addEventListener('click', function(){
@@ -130,7 +130,7 @@
 
 /*------------------FUNCIÓN DE CLICK EN LAS IMÁGENES--------------------*/
 
-function clickImagen() {
+/* function clickImagen() {
     if(!dispositivoMovil){
         this.querySelector('.cortina').classList.toggle('ocultar');
     }
@@ -158,7 +158,7 @@ function clickImagen() {
        imgn.style.width = '100%';
        modoMosaico = !modoMosaico;
     }
-}
+} */
 
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
