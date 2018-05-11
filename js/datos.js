@@ -5,15 +5,17 @@ var jsonDatos = [
        "titulo": "LA CIUDAD CÚBICA",
        "archivo": "1.gif",
        "clases": "animation illustration digital geometry",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Pixel art animación" 
     },
     {
        "nombre": "img2",
        "numero": 2,
        "titulo": "PISOTEO",
        "archivo": "2.jpg",
-       "clases": "animation illustration digital",
-       "menu": "illustration"
+       "clases": "illustration digital",
+       "menu": "illustration",
+       "alt": "Ilustración digital. Animales. Alfombra" 
     },
     {
        "nombre": "img3",
@@ -21,7 +23,8 @@ var jsonDatos = [
        "titulo": "ALMUDENA",
        "archivo": "3.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering" 
     },
     {
        "nombre": "img4",
@@ -29,7 +32,8 @@ var jsonDatos = [
        "titulo": "ESCENARIO PRIMAVERA",
        "archivo": "4.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher. Dibujo en conciertos" 
     },
     {
        "nombre": "img5",
@@ -37,7 +41,8 @@ var jsonDatos = [
        "titulo": "VERANO",
        "archivo": "5.jpg",
        "clases": "digital illustration",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Ilustración digital. Estrella de mar" 
     },
     {
        "nombre": "img6",
@@ -45,7 +50,8 @@ var jsonDatos = [
        "titulo": "OLEADA",
        "archivo": "6.mp4",
        "clases": "animation illlustration digital",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación y motion graphics. Cangrejo. Verano" 
     },
     {
        "nombre": "img7",
@@ -53,7 +59,8 @@ var jsonDatos = [
        "titulo": "ANTOÑICO",
        "archivo": "7.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering. Antonio" 
     },
     {
        "nombre": "img8",
@@ -61,7 +68,8 @@ var jsonDatos = [
        "titulo": "ARDE ARCADE",
        "archivo": "8.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher y dibujo en conciertos. Arcade Fire" 
     },
     {
        "nombre": "img9",
@@ -69,7 +77,8 @@ var jsonDatos = [
        "titulo": "CON VISTAS AL ARTE",
        "archivo": "9.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher. Arco" 
     },
     {
        "nombre": "img10",
@@ -77,7 +86,8 @@ var jsonDatos = [
        "titulo": "LA CABRA, LA CABRA",
        "archivo": "10.jpg",
        "clases": "illustration digital geometry",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital y geométrica" 
     },
     {
        "nombre": "img11",
@@ -85,7 +95,8 @@ var jsonDatos = [
        "titulo": "CAMELAR",
        "archivo": "11.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering" 
     },
     {
        "nombre": "img12",
@@ -93,7 +104,8 @@ var jsonDatos = [
        "titulo": "NOVANA",
        "archivo": "12.jpg",
        "clases": "photo digital poster",
-       "menu": "poster"
+       "menu": "poster",
+       "alt": "Diseño de poster. Procesado fotográfico" 
     },
     {
        "nombre": "img13",
@@ -101,7 +113,8 @@ var jsonDatos = [
        "titulo": "LA FUTURA DE TODA LA VIDA",
        "archivo": "13.jpg",
        "clases": "digital poster",
-       "menu": "poster"
+       "menu": "poster",
+       "alt": "Poster y tipografía" 
     },
     {
        "nombre": "img14",
@@ -109,7 +122,8 @@ var jsonDatos = [
        "titulo": "CAZA MAYOR",
        "archivo": "14.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital. Animales. León" 
     },
     {
        "nombre": "img15",
@@ -117,7 +131,8 @@ var jsonDatos = [
        "titulo": "SE BUSCAN",
        "archivo": "15.mp4",
        "clases": "animation photo",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Cinemagraph. Novana" 
     },
     {
        "nombre": "img16",
@@ -125,7 +140,8 @@ var jsonDatos = [
        "titulo": "MIL NOVECIENTOS OCHENTAYCINCO",
        "archivo": "16.jpg",
        "clases": "poster digital",
-       "menu": "poster"
+       "menu": "poster",
+       "alt": "Diseño portada libro. Oswald. 1984" 
     },
     {
        "nombre": "img17",
@@ -133,7 +149,8 @@ var jsonDatos = [
        "titulo": "PARTIDA EN DOS",
        "archivo": "17.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográfico. Mujeres en la ciencia" 
     },
     {
        "nombre": "img18",
@@ -141,7 +158,8 @@ var jsonDatos = [
        "titulo": "HOLA CARACOLA",
        "archivo": "18.mp4",
        "clases": "generative geometry animation digital",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Arte generativo. Animación. Espiral" 
     },
     {
        "nombre": "img19",
@@ -149,7 +167,8 @@ var jsonDatos = [
        "titulo": "CRYSTAL FIGHTERS",
        "archivo": "19.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher. Dibujo en conciertos" 
     },
     {
        "nombre": "img20",
@@ -157,7 +176,8 @@ var jsonDatos = [
        "titulo": "CUANDO CALLAS",
        "archivo": "20.jpg",
        "clases": "illustration digital",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital del libro Deslenguada Palabra" 
     },
     {
        "nombre": "img21",
@@ -165,7 +185,8 @@ var jsonDatos = [
        "titulo": "BROKEN MIRROR",
        "archivo": "21.jpg",
        "clases": "photo collage geometry",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográfico. Mujeres en la ciencia" 
     },
     {
        "nombre": "img22",
@@ -173,7 +194,8 @@ var jsonDatos = [
        "titulo": "¿FRIGODEDO O FRIGOPIÉ?",
        "archivo": "22.mp4",
        "clases": "animation digital illustration",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación y motion graphics. Verano" 
     },
     {
        "nombre": "img23",
@@ -181,7 +203,8 @@ var jsonDatos = [
        "titulo": "MUJERES",
        "archivo": "23.jpg",
        "clases": "drawing illustration",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Dibujo. 8 de marzo. Día de la mujer" 
     },
     {
        "nombre": "img24",
@@ -189,7 +212,8 @@ var jsonDatos = [
        "titulo": "ABRÁZAME",
        "archivo": "24.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital" 
     },
     {
        "nombre": "img25",
@@ -197,7 +221,8 @@ var jsonDatos = [
        "titulo": "GUERNICA EN MOVIMIENTO I",
        "archivo": "25.mp4",
        "clases": "animation digital",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación y motion graphics" 
     },
     {
        "nombre": "img26",
@@ -205,7 +230,8 @@ var jsonDatos = [
        "titulo": "EL PRINCIPITO",
        "archivo": "26.jpg",
        "clases": "digital illustration",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Ilustración digital" 
     },
     {
        "nombre": "img27",
@@ -213,7 +239,8 @@ var jsonDatos = [
        "titulo": "DE COLORES",
        "archivo": "27.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Elena Titos. Laphille. Procesado fotográfico" 
     },
     {
        "nombre": "img28",
@@ -221,7 +248,8 @@ var jsonDatos = [
        "titulo": "ENRIC EL SABIO",
        "archivo": "28.jpg",
        "clases": "photo",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Fotografía creativa" 
     },
     {
        "nombre": "img29",
@@ -229,7 +257,8 @@ var jsonDatos = [
        "titulo": "SILENCIO TRIANGULAR",
        "archivo": "29.jpg",
        "clases": "photo collage geometry",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográficos mujeres y ciencia" 
     },
     {
        "nombre": "img30",
@@ -237,15 +266,17 @@ var jsonDatos = [
        "titulo": "A CUADROS",
        "archivo": "30.mp4",
        "clases": "pattern animation digital geometry",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Arte generativo. Processing. Animación. Pattern" 
     },
     {
        "nombre": "img31",
        "numero": 31,
-       "titulo": "DISTORSIÓN ",
+       "titulo": "DISTORSIÓN",
        "archivo": "31.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográfico. Mujeres en la ciencia" 
     },
     {
        "nombre": "img32",
@@ -253,7 +284,8 @@ var jsonDatos = [
        "titulo": "LA TÍA MISERIA",
        "archivo": "32.jpg",
        "clases": "illustration digital",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración editorial. Cuento Popular" 
     },
     {
        "nombre": "img33",
@@ -261,7 +293,8 @@ var jsonDatos = [
        "titulo": "ADIOS A LA BOHEME",
        "archivo": "33.jpg",
        "clases": "drawing illustration",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Dibujo" 
     },
     {
        "nombre": "img34",
@@ -269,7 +302,8 @@ var jsonDatos = [
        "titulo": "NOVANA Y LOS SECRETOS",
        "archivo": "34.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban Sketcher. Dibujo en conciertos" 
     },
     {
        "nombre": "img35",
@@ -277,7 +311,8 @@ var jsonDatos = [
        "titulo": "SERGIO EL SABIO",
        "archivo": "35.jpg",
        "clases": "photo",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Fotomontaje" 
     },
     {
        "nombre": "img36",
@@ -285,7 +320,8 @@ var jsonDatos = [
        "titulo": "HOMENAJE A FORGES",
        "archivo": "36.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering. Se sienten, coño" 
     },
     {
        "nombre": "img37",
@@ -293,7 +329,8 @@ var jsonDatos = [
        "titulo": "SOY PERRO",
        "archivo": "37.jpg",
        "clases": "illustration digital",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital del libro Deslenguada palabra" 
     },
     {
        "nombre": "img38",
@@ -301,7 +338,8 @@ var jsonDatos = [
        "titulo": "GUAU!",
        "archivo": "38.gif",
        "clases": "animation geometry digital",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación pixel art. Perro" 
     },
     {
        "nombre": "img39",
@@ -309,7 +347,8 @@ var jsonDatos = [
        "titulo": "LAURA",
        "archivo": "39.jpg",
        "clases": "photo",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Procesado fotográfico creativo. Novana" 
     },
     {
        "nombre": "img40",
@@ -317,7 +356,8 @@ var jsonDatos = [
        "titulo": "PILAR",
        "archivo": "40.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográfico" 
     },
     {
        "nombre": "img41",
@@ -325,7 +365,8 @@ var jsonDatos = [
        "titulo": "EN LA ESPIRAL",
        "archivo": "41.mp4",
        "clases": "animation generative digital geometry",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Arte generativo y animación. Matemáticas" 
     },
     {
        "nombre": "img42",
@@ -333,7 +374,8 @@ var jsonDatos = [
        "titulo": "GUERNICA EN MOVIMIENTO II",
        "archivo": "42.mp4",
        "clases": "animation",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación y motion graphics" 
     },
     {
        "nombre": "img43",
@@ -341,7 +383,8 @@ var jsonDatos = [
        "titulo": "BLINDLESS",
        "archivo": "43.jpg",
        "clases": "photo",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Procesado fotográfico creativo" 
     },
     {
        "nombre": "img44",
@@ -349,7 +392,8 @@ var jsonDatos = [
        "titulo": "YO, PAYASO",
        "archivo": "44.jpg",
        "clases": "drawing illustration",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Dibujo e ilustración" 
     },
     {
        "nombre": "img45",
@@ -357,7 +401,8 @@ var jsonDatos = [
        "titulo": "MUJER EN ROSA",
        "archivo": "45.jpg",
        "clases": "illustration digital geometry",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital geométrica" 
     },
     {
        "nombre": "img46",
@@ -365,7 +410,8 @@ var jsonDatos = [
        "titulo": "NEGRO OSCURO",
        "archivo": "46.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering" 
     },
     {
        "nombre": "img47",
@@ -373,7 +419,8 @@ var jsonDatos = [
        "titulo": "UN PERRO VERDE",
        "archivo": "47.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital" 
     },
     {
        "nombre": "img48",
@@ -381,7 +428,8 @@ var jsonDatos = [
        "titulo": "PELOMONO",
        "archivo": "48.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban Sketcher. Dibujo en conciertos" 
     },
     {
        "nombre": "img49",
@@ -389,7 +437,8 @@ var jsonDatos = [
        "titulo": "VECINOS",
        "archivo": "49.jpg",
        "clases": "poster digital",
-       "menu": "poster"
+       "menu": "poster",
+       "alt": "Diseño de poster. Teatro" 
     },
     {
        "nombre": "img50",
@@ -397,7 +446,8 @@ var jsonDatos = [
        "titulo": "RUTINAS",
        "archivo": "50.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital del libro deslenguada palabra" 
     },
     {
        "nombre": "img51",
@@ -405,7 +455,8 @@ var jsonDatos = [
        "titulo": "MUJERES Y SECRETOS",
        "archivo": "51.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban Sketcher. Dibujo en concierto. Homenaje a los secretos" 
     },
     {
        "nombre": "img52",
@@ -413,7 +464,8 @@ var jsonDatos = [
        "titulo": "SOFAR SOUND",
        "archivo": "52.jpg",
        "clases": "poster digital",
-       "menu": "poster"
+       "menu": "poster",
+       "alt": "Diseño de poster" 
     },
     {
        "nombre": "img53",
@@ -421,7 +473,8 @@ var jsonDatos = [
        "titulo": "LADO LUZ",
        "archivo": "53.jpg",
        "clases": "photo",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Procesado fotográfico creativo" 
     },
     {
        "nombre": "img54",
@@ -429,7 +482,8 @@ var jsonDatos = [
        "titulo": "BOWIE",
        "archivo": "54.mp4",
        "clases": "animation digital ilustration",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Animación y motion graphics" 
     },
     {
        "nombre": "img55",
@@ -437,7 +491,8 @@ var jsonDatos = [
        "titulo": "CALCOTADA",
        "archivo": "55.jpg",
        "clases": "lettering digital",
-       "menu": "lettering"
+       "menu": "lettering",
+       "alt": "Lettering" 
     },
     {
        "nombre": "img56",
@@ -445,7 +500,8 @@ var jsonDatos = [
        "titulo": "TOCAR, TOCAR, TOCAR",
        "archivo": "56.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital para el libro Deslenguada Palabra" 
     },
     {
        "nombre": "img57",
@@ -453,15 +509,17 @@ var jsonDatos = [
        "titulo": "BAÑISTA",
        "archivo": "57.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher. Dibujo" 
     },
     {
        "nombre": "img58",
        "numero": 58,
        "titulo": "LOS OCHENTA",
        "archivo": "58.gif",
-       "clases": "animation digital geomerative geometry",
-       "menu": "motion"
+       "clases": "animation digital geomerative geometry pattern",
+       "menu": "motion",
+       "alt": "Animación y motion graphics. Pattern" 
     },
     {
        "nombre": "img59",
@@ -469,7 +527,8 @@ var jsonDatos = [
        "titulo": "SE ALQUILA CORAZÓN",
        "archivo": "59.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital para el libro Deslenguada Palabra" 
     },
     {
        "nombre": "img60",
@@ -477,7 +536,8 @@ var jsonDatos = [
        "titulo": "CAT",
        "archivo": "60.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital" 
     },
     {
        "nombre": "img61",
@@ -485,7 +545,8 @@ var jsonDatos = [
        "titulo": "DISTORSIÓN II",
        "archivo": "61.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage fotográfico. Mujeres en la ciencia" 
     },
     {
        "nombre": "img62",
@@ -493,7 +554,8 @@ var jsonDatos = [
        "titulo": "ME LLORAN LOS CUADROS",
        "archivo": "62.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital para el libro Deslenguada Palabra" 
     },
     {
        "nombre": "img63",
@@ -501,7 +563,8 @@ var jsonDatos = [
        "titulo": "DISTORSIÓN III",
        "archivo": "63.jpg",
        "clases": "photo collage",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Collage digital. Mujeres en la ciencia" 
     },
     {
        "nombre": "img64",
@@ -509,7 +572,8 @@ var jsonDatos = [
        "titulo": "EXTREMOS",
        "archivo": "64.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital para el libro Deslenguada Palabra" 
     },
     {
        "nombre": "img65",
@@ -517,7 +581,8 @@ var jsonDatos = [
        "titulo": "GLORIETA QUEVEDO",
        "archivo": "65.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban sketcher. Madrid" 
     },
     {
        "nombre": "img66",
@@ -525,7 +590,8 @@ var jsonDatos = [
        "titulo": "LAPAVIÉS",
        "archivo": "66.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban Sketcher. Madrid" 
     },
     {
        "nombre": "img67",
@@ -533,7 +599,8 @@ var jsonDatos = [
        "titulo": "BORU",
        "archivo": "67.mp4",
        "clases": "photo animation",
-       "menu": "photo"
+       "menu": "photo",
+       "alt": "Cinemagraph" 
     },
     {
        "nombre": "img68",
@@ -541,7 +608,8 @@ var jsonDatos = [
        "titulo": "TROFEOS",
        "archivo": "68.jpg",
        "clases": "digital illustration",
-       "menu": "illustration"
+       "menu": "illustration",
+       "alt": "Ilustración digital. Animales. Caza" 
     },
     {
        "nombre": "img69",
@@ -549,7 +617,8 @@ var jsonDatos = [
        "titulo": "R2D2",
        "archivo": "69.gif",
        "clases": "digital illustration animation geometry",
-       "menu": "motion"
+       "menu": "motion",
+       "alt": "Pixel art. Star Wars. Animación" 
     },
     {
        "nombre": "img70",
@@ -557,7 +626,8 @@ var jsonDatos = [
        "titulo": "EL OJO DE LAPHILLE",
        "archivo": "70.jpg",
        "clases": "drawing usk",
-       "menu": "drawing"
+       "menu": "drawing",
+       "alt": "Urban Sketcher" 
     }
  ]
 

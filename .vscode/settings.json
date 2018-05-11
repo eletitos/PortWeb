@@ -1,10 +1,5 @@
 {
     "liveSassCompile.settings.formats":[
-       {                            //Salva un archivo normal, para controlar
-           "format": "expanded",
-           "extensionName": ".css",
-           "savePath": "/css"
-       },
        {                            //salva un archivo comprimido, que pese menos
            "extensionName": ".min.css",
            "format": "compressed",

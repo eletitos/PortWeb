@@ -61,7 +61,7 @@
             if(primerScroll && numeroColumnas>1){       //se establece animación primer scroll
                 window.scrollTo(0, 0);
                 document.querySelector('.caja-cabecera').classList.add('recogida');
-                document.querySelector('.tags').classList.add('tag-desplegado');
+                document.querySelector('.pie').classList.add('pie-desplegado');
                 setTimeout(function () {  primerScroll = false;}, 900);
             }
         }
@@ -206,7 +206,7 @@ function crearGaleria() {
         if(extension==='mp4'){
             elemento = `<video loop autoplay muted playsinline src="../videos/video500px/${archivo}"></video>`
         }else{
-            elemento = `<img src="../img/portfolio/${archivo}" alt="">`
+            elemento = `<img src="../img/portfolio/${archivo}" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
         }
 
         contenedor.appendChild(caja);
