@@ -35,11 +35,26 @@
         cortina[i].innerHTML = '<h3 class="titulo">'+datos[i].titulo +'</h3>';
 
     }
+
+  /*   imagen.forEach(function(val){
+        val.addEventListener('load', function () { 
+            calculoPosicion();
+         })
+    })
+
+    videos.forEach(function(val){
+        console.log('activado');
+        val.addEventListener('load', function () { 
+            calculoPosicion();
+            console.log(`imagen ${val} cargada`);
+         })
+    }) */
+
   
 /*------------------------EVENTOS----------------------------------------*/  
 
     window.addEventListener('resize', function(){
-            arrayMinimos =[];
+
             calcularColumnas();
             calculoPosicion();
     });
@@ -56,8 +71,7 @@
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             window.scrollTo(0, scrollPosition);
         }else{
-            arrayMinimos = [];      //inicializando array valores columna.
-            calculoPosicion();
+            //calculoPosicion();
             if(primerScroll && numeroColumnas>1){       //se establece animación primer scroll
                 window.scrollTo(0, 0);
                 document.querySelector('.caja-cabecera').classList.add('recogida');
@@ -149,6 +163,7 @@ function clickImagen() {
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
   function calculoPosicion() {
+    arrayMinimos =[];
     for (let n = 0; n < numeroColumnas; n++) {        //Inicializando el array de los valores de columna.
         arrayMinimos.push(0); 
     };
@@ -163,7 +178,7 @@ for (let i = 0; i < imagen.length; i++) {
     }    
     var maximo = Math.max.apply(null, arrayMinimos);
     contenedor.style.height = maximo + 'px';           //fijo altura del contenedor.
-
+    console.log('posicion calculada');
   }
 
 /*   ------------------------------FUNCIÓN PARA CÁLCULO DE COLUMNAS--------------------------- */
@@ -204,9 +219,9 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop autoplay muted playsinline src="../videos/video500px/${archivo}"></video>`
+            elemento = `<video loop autoplay onload="calculoPosicion()" muted playsinline src="../videos/video500px/${archivo}"></video>`
         }else{
-            elemento = `<img src="../img/portfolio/${archivo}" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
+            elemento = `<img src="../img/portfolio/${archivo}" onload="calculoPosicion()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
         }
 
         contenedor.appendChild(caja);
