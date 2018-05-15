@@ -220,7 +220,7 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop onloadeddata="graficoCarga()" muted autoplay playsinline src="../videos/video500px/${archivo}" poster="../videos/video500px/poster/poster${i+1}.jpg"></video>`
+            elemento = `<video loop onloadedmetadata="graficoCarga()" muted autoplay playsinline src="../videos/video500px/${archivo}" poster="../videos/video500px/poster/poster${i+1}.jpg"></video>`
         }else{
             elemento = `<img src="../img/portfolio/${archivo}" onload="graficoCarga()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
         }
