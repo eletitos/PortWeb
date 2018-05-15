@@ -24,6 +24,8 @@
     var caja;
     var videos;
     var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
+    var carga = 0;
+    var porcentajeCarga = document.querySelector('.grafico-carga p');
     
    
     document.oncontextmenu = function(){return false;}      //desactivar botón derecho
@@ -178,7 +180,6 @@ for (let i = 0; i < imagen.length; i++) {
     }    
     var maximo = Math.max.apply(null, arrayMinimos);
     contenedor.style.height = maximo + 'px';           //fijo altura del contenedor.
-    console.log('posicion calculada');
   }
 
 /*   ------------------------------FUNCIÓN PARA CÁLCULO DE COLUMNAS--------------------------- */
@@ -219,9 +220,9 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop autoplay onload="calculoPosicion()" muted playsinline src="../videos/video500px/${archivo}"></video>`
+            elemento = `<video loop onloadeddata="graficoCarga()" muted autoplay playsinline src="../videos/video500px/${archivo}" poster="../videos/video500px/poster/poster${i+1}.jpg"></video>`
         }else{
-            elemento = `<img src="../img/portfolio/${archivo}" onload="calculoPosicion()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
+            elemento = `<img src="../img/portfolio/${archivo}" onload="graficoCarga()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
         }
 
         contenedor.appendChild(caja);
@@ -230,29 +231,44 @@ function crearGaleria() {
     imagen = document.querySelectorAll('.imagen');
     cortina = document.querySelectorAll('.cortina');
     videos = document.querySelectorAll('video');
-    sinAutoplay();
 }
 
 /* ----------------FUNCIÓN PARA DISPOSITIVOS SIN AUTOPLAY--------------------------- */
 
 function sinAutoplay() {
+
     setTimeout(function(){
         videos.forEach(function(val, index){
             let tiempo = videos[index].currentTime;
             if(tiempo===0){
-                let numeroPoster = val.getAttribute('src').split('px/')[1].split('.')[0];
-                let srcPoster = `../videos/video500px/poster/poster${numeroPoster}.jpg`
-                val.setAttribute('poster', srcPoster);
                 val.parentElement.insertAdjacentHTML('beforeend', playIcon);
                 let botonPlay = val.parentElement.querySelector('.play-icon');
                 botonPlay.addEventListener('click', function (e) { 
                     e.stopPropagation();
                     val.play();
                  })
-                val.addEventListener('play', function(){
-                    botonPlay.style.display = 'none';
-                })
+                 val.onplaying = function(){botonPlay.style.display = 'none'}
+
             }
         });
     }, 1500);
+}
+
+
+/* --------------FUNCIÓN GRÁFICO DE CARGA------------------ */
+
+function graficoCarga() {
+    carga = carga + 1/numeroFotos*100;
+    if(carga<100){
+        let texto = Math.round(carga);
+        porcentajeCarga.textContent = `${texto}%`;
+    }else{
+        porcentajeCarga.textContent = '100%'
+        calculoPosicion();
+        sinAutoplay();
+        setTimeout(function () {
+            document.querySelector('.grafico-carga').style.display = 'none';
+        }, 400)
+    }
+    
 }

@@ -143,9 +143,7 @@ function sinAutoplay() {
                     e.stopPropagation();
                     val.play();
                  })
-                val.addEventListener('play', function(){
-                    botonPlay.style.display = 'none';
-                })
+                 val.onplaying = function(){botonPlay.style.display = 'none'}
             }
         });
     }, 3000);

@@ -1,0 +1,12 @@
+RewriteEngine On
+
+## Redirección a https certificado SSL
+RewriteCond %{ENV:HTTPS} !on [NC]
+RewriteCond %{HTTP_HOST} ^elenatitos.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.elenatitos.com$
+RewriteRule ^(.*)$ https://www.elenatitos.com/$1 [R=301,L,NE]
+
+## Código para que elimine la extensión html de la barra de direcciones
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
