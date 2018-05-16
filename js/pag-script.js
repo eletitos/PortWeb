@@ -52,7 +52,11 @@ about.addEventListener('click', function(){
 });
 
 botonMenu.addEventListener('change',function () { 
-    scrollPosition = window.scrollY;
+    if(botonMenu.checked){
+        document.body.style.overflow = 'hidden';
+    }else{
+      document.body.style.overflow = 'auto'  
+    }
     if (aboutDesplegado) {
         cortinaRoja.classList.replace('desplegado','replegado');
         textoAbout.classList.replace('desplegado-texto', 'replegado-texto');
@@ -65,20 +69,20 @@ botonMenu.addEventListener('change',function () {
 
 window.addEventListener('scroll', function () { 
     desplazamientoImagenes();
-    desplazamientoTexto();
-    if (botonMenu.checked) {
+        desplazamientoTexto();
+ /*    if (botonMenu.checked) {
         window.scrollTo(0, scrollPosition);
-    }
+        console.log(`scroll atascado en ${window.scrollY}`);
+    }else{
+        
+    } */
  });
 
- document.body.addEventListener('touchmove', function () {
+ /* document.body.addEventListener('touchmove', function () {
     if(botonMenu.checked){                          //Se fija el scroll si el menú está desplegado.
-        //window.scrollY=scrollPosition;
-        //e.preventDefault();
-        //e.stopPropagation();
         document.body.style.overflow = 'hidden';
     }else{document.body.style.overflow = 'auto'}
-});
+}); */
 
 email.addEventListener('mouseenter', function(){
     document.oncontextmenu = function(){return true;}  
