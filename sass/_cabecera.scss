@@ -1,31 +1,3 @@
-.grafico-carga{
-    position: fixed;
-    background: $colorCabecera;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    z-index: $zIndexGraficoCarga;
-    .flex{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .circulo{
-            background: $colorFuente;
-            border-radius: 50%;
-            width: 25vmin;
-            height: 25vmin;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p{
-                color: $colorCabecera;
-                font-size: 7vmin;
-            }
-        }
-    }
-}
 
 .caja-cabecera{
     height: 100vh;

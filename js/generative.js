@@ -13,30 +13,30 @@ var menu = document.querySelector('header nav');
 var cortina = document.querySelectorAll('.cortina');
 var cortinaRoja = document.querySelector('.cortina-roja');
 var iconosRedes = document.querySelectorAll('.iconos-redes');
-var textoAbout =  document.querySelector('.texto-about');
+var textoAbout = document.querySelector('.texto-about');
 
 
 
 
-about.addEventListener('click', function(){
+about.addEventListener('click', function () {
     cortinaRoja.classList.remove('replegado');
     cortinaRoja.classList.add('desplegado');
     textoAbout.classList.replace('replegado-texto', 'desplegado-texto');
     for (let i = 0; i < iconosRedes.length; i++) {
-        iconosRedes[i].classList.add('mostrar');  
+        iconosRedes[i].classList.add('mostrar');
     }
     aboutDesplegado = true;
 });
 
-botonMenu.addEventListener('change',function () { 
+botonMenu.addEventListener('change', function () {
     scrollPosition = window.scrollY;
     if (aboutDesplegado) {
-        cortinaRoja.classList.replace('desplegado','replegado');
+        cortinaRoja.classList.replace('desplegado', 'replegado');
         textoAbout.classList.replace('desplegado-texto', 'replegado-texto');
         for (let i = 0; i < iconosRedes.length; i++) {
             iconosRedes[i].classList.remove('mostrar');
-            
+
         }
     }
- });
+});
 

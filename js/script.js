@@ -24,8 +24,7 @@
     var caja;
     var videos;
     var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
-    var carga = 0;
-    var porcentajeCarga = document.querySelector('.grafico-carga p');
+    
     
    
     document.oncontextmenu = function(){return false;}      //desactivar botón derecho
@@ -220,9 +219,9 @@ function crearGaleria() {
         let extension = archivo.split('.')[1];
         let elemento;
         if(extension==='mp4'){
-            elemento = `<video loop onloadedmetadata="graficoCarga()" muted autoplay playsinline src="../videos/video500px/${archivo}" poster="../videos/video500px/poster/poster${i+1}.jpg"></video>`
+            elemento = `<video loop onloadedmetadata="calculoPosicion()" muted autoplay playsinline src="../videos/video500px/${archivo}" poster="../videos/video500px/poster/poster${i+1}.jpg"></video>`
         }else{
-            elemento = `<img src="../img/portfolio/${archivo}" onload="graficoCarga()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
+            elemento = `<img src="../img/portfolio/${archivo}" onload="calculoPosicion()" alt="Elena Titos. ${datos[i].alt}. ${datos[i].titulo}">`
         }
 
         contenedor.appendChild(caja);
@@ -231,6 +230,7 @@ function crearGaleria() {
     imagen = document.querySelectorAll('.imagen');
     cortina = document.querySelectorAll('.cortina');
     videos = document.querySelectorAll('video');
+    sinAutoplay()
 }
 
 /* ----------------FUNCIÓN PARA DISPOSITIVOS SIN AUTOPLAY--------------------------- */
@@ -255,20 +255,3 @@ function sinAutoplay() {
 }
 
 
-/* --------------FUNCIÓN GRÁFICO DE CARGA------------------ */
-
-function graficoCarga() {
-    carga = carga + 1/numeroFotos*100;
-    if(carga<100){
-        let texto = Math.round(carga);
-        porcentajeCarga.textContent = `${texto}%`;
-    }else{
-        porcentajeCarga.textContent = '100%'
-        calculoPosicion();
-        sinAutoplay();
-        setTimeout(function () {
-            document.querySelector('.grafico-carga').style.display = 'none';
-        }, 400)
-    }
-    
-}

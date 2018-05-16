@@ -110,7 +110,7 @@ function desplazamientoImagenes() {
 /*--------------FUNCIÓN DESPLAZAMIENTO TEXTO-----------------------*/
 
 function desplazamientoTexto() {
-    if(anchoVentana > 800){
+    if(anchoVentana > 1100){
         var scroll = window.scrollY;
         texto.style.transform = 'translateY(' + scroll/1.4 + 'px)';
     }
