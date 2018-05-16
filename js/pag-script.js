@@ -25,6 +25,9 @@ cajasImagenes.forEach(function (v, i) {
     posicionTopImagen = cajasImagenes[i].getBoundingClientRect().top;
     if (posicionTopImagen>0 && posicionTopImagen<altoVentana) {
         cajasImagenes[i].children[0].classList.add('cambio-opacidad');
+        setTimeout(function () {  
+            cajasImagenes[i].style.background = 'transparent';
+        }, 1800)
     }
 });
 
@@ -123,7 +126,6 @@ function atributosAlt(){
         let numeroString = val.getAttribute('src').split('portfolio/')[1].split('.')[0];
         let numeroImagen = Number(numeroString) - 1;
         val.setAttribute('alt', `Elena Titos. ${datos[numeroImagen].alt}. ${datos[numeroImagen].titulo}`)
-        console.log(numeroImagen);
     })
 }
 
