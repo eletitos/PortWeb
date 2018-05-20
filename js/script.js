@@ -58,6 +58,23 @@
 
      })
 
+     for (let i = 0; i < imagen.length; i++) {
+        imagen[i].addEventListener('mouseenter', function(){
+            if(!dispositivoMovil){
+            this.querySelector('.cortina').classList.add('cortina-info');
+            let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
+            objetoDesplazado.classList.add('efecto-desplazamiento');
+            }
+        }); 
+        imagen[i].addEventListener('mouseleave', function(){
+            if(!dispositivoMovil){
+            this.querySelector('.cortina').classList.remove('cortina-info');
+            let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
+            objetoDesplazado.classList.remove('efecto-desplazamiento');
+            }
+        }); 
+    }
+
     window.addEventListener('scroll', function () { 
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             window.scrollTo(0, scrollPosition);
