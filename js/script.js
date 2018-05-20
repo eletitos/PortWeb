@@ -24,32 +24,22 @@
     var caja;
     var videos;
     var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
+    let hojaEstilo = document.styleSheets[1];
+    let cssSize = hojaEstilo.cssRules.length;
     
     
    
     document.oncontextmenu = function(){return false;}      //desactivar botón derecho
+    insertarReglaCss();
     crearGaleria();
     calcularColumnas();         //Calculo las columnas en función del tipo de pantalla con la función que he creado más abajo.
     calculoPosicion();
 
     for (let i = 0; i < datos.length; i++) {
-        cortina[i].innerHTML = '<h3 class="titulo">'+datos[i].titulo +'</h3>';
+        cortina[i].innerHTML = `<h3 class="titulo"> ${datos[i].titulo}</h3><span class="etiquetas">${datos[i].etiqueta}</span>`;
 
     }
 
-  /*   imagen.forEach(function(val){
-        val.addEventListener('load', function () { 
-            calculoPosicion();
-         })
-    })
-
-    videos.forEach(function(val){
-        console.log('activado');
-        val.addEventListener('load', function () { 
-            calculoPosicion();
-            console.log(`imagen ${val} cargada`);
-         })
-    }) */
 
   
 /*------------------------EVENTOS----------------------------------------*/  
@@ -62,9 +52,9 @@
 
     window.addEventListener('touchstart', function () { 
         dispositivoMovil = true;
-        cortina.forEach(function(val){
-            val.classList.add('ocultar');
-        })
+        for (let i = 0; i < imagen.length; i++) {
+            imagen[i].addEventListener('click', clickImagen);  
+        }
 
      })
 
@@ -85,9 +75,6 @@
      
     document.body.addEventListener('touchmove', function () {
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
-            //window.scrollY=scrollPosition;
-            //e.preventDefault();
-            //e.stopPropagation();
             document.body.style.overflow = 'hidden';
         }else{document.body.style.overflow = 'auto'}
     });
@@ -105,10 +92,8 @@
      });
 
   
-   /*   for (let i = 0; i < imagen.length; i++) {
-         imagen[i].addEventListener('click', clickImagen);  
-     }
- */
+   
+
     
 
     about.addEventListener('click', function(){
@@ -161,6 +146,11 @@
     }
 } */
 
+function clickImagen() {
+    console.log(this.querySelector('.cortina'));
+    this.querySelector('.cortina').classList.toggle('cortina-info');
+}
+
 /*----------------------FUNCIÓN DE CÁLCULO DE POSICIÓN-----------------------------*/
 
   function calculoPosicion() {
@@ -197,6 +187,11 @@ for (let i = 0; i < imagen.length; i++) {
         }
         anchoColumnas = 100/numeroColumnas;
         imagen.forEach(function (value, index) { imagen[index].style.width = anchoColumnas + '%' });
+        let alturaInfo = Math.round(anchoContenedor/numeroColumnas*0.3);
+        let desplazamiento = Math.round(anchoContenedor/numeroColumnas*0.15);
+
+        fijarAlturaInfo(alturaInfo, desplazamiento);
+
     }
  
 //--------------FUNCIÓN CÁLCULO ALTURA MÁXIMA FOTOS------------------
@@ -254,4 +249,23 @@ function sinAutoplay() {
     }, 1500);
 }
 
+/* --------------FUNCIÓN CLICK EN IMÁGENES---------------- */
 
+function clickImagen() {
+    this.querySelector('.cortina').classList.toggle('cortina-info');
+    let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
+    objetoDesplazado.classList.toggle('efecto-desplazamiento');
+    
+}
+
+/* ----------------FUNCIÓN PARA INTRODUCIR UNA NUEVA REGLA DE ESTILO--------- */
+
+function insertarReglaCss() {
+    hojaEstilo.insertRule('.cortina-info{height: 0;}', cssSize);
+    hojaEstilo.insertRule('.efecto-desplazamiento{transform: translateY(-57px); -webkit-transform: translateZ(0);}', cssSize+1);
+}
+
+function fijarAlturaInfo(alto, desplazamiento) {
+    hojaEstilo.cssRules[cssSize].style.height = `${alto}px`;
+    hojaEstilo.cssRules[cssSize+1].style.transform = `translateY(${-desplazamiento}px)`;
+}
