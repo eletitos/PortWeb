@@ -205,7 +205,7 @@ for (let i = 0; i < imagen.length; i++) {
         anchoColumnas = 100/numeroColumnas;
         imagen.forEach(function (value, index) { imagen[index].style.width = anchoColumnas + '%' });
         let alturaInfo = Math.round(anchoContenedor/numeroColumnas*0.3);
-        let desplazamiento = Math.round(anchoContenedor/numeroColumnas*0.15);
+        let desplazamiento = Math.round(anchoContenedor/numeroColumnas*0.1);
 
         fijarAlturaInfo(alturaInfo, desplazamiento);
 
@@ -269,6 +269,7 @@ function sinAutoplay() {
 /* --------------FUNCIÓN CLICK EN IMÁGENES---------------- */
 
 function clickImagen() {
+    this.scrollIntoView({ behavior: 'smooth' });
     this.querySelector('.cortina').classList.toggle('cortina-info');
     let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
     objetoDesplazado.classList.toggle('efecto-desplazamiento');
