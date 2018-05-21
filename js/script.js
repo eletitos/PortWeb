@@ -81,7 +81,7 @@
             window.scrollTo(0, scrollPosition);
         }else{
             //calculoPosicion();
-            if(primerScroll && numeroColumnas>1 && (window.innerWidth>1400 || screen.orientation.type.includes('portrait'))){       //se establece animación primer scroll
+            if(primerScroll && numeroColumnas>1 && (window.innerWidth>1450 || screen.orientation.type.includes('portrait'))){       //se establece animación primer scroll
                 window.scrollTo(0, 0);
                 document.querySelector('.caja-cabecera').classList.add('recogida');
                 document.querySelector('.pie').classList.add('pie-desplegado');
