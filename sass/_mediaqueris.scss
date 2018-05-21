@@ -68,3 +68,14 @@
     .flecha{display: none}
 
 }
+
+@media screen and (min-width: 501px) and (max-width: 1400px) and (orientation: landscape){
+    .barra-superior{
+        background: transparent;
+    }
+    .fondo-barra{
+        background: transparent;
+    }
+
+    .pie{display: none}
+}
