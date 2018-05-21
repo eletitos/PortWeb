@@ -65,7 +65,7 @@
 
     }
 
-    .flecha{display: none}
+    //.flecha{display: none}
 
 }
 
@@ -78,4 +78,14 @@
     }
 
     .pie{display: none}
+
+    .cortina-menu div{
+        top: 0;
+        bottom: 0;
+    }
+
+    nav ul{
+        padding-top: $margenCuadro;
+        padding-bottom: $margenCuadro;
+    }
 }
