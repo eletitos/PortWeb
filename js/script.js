@@ -269,7 +269,7 @@ function sinAutoplay() {
 /* --------------FUNCIÓN CLICK EN IMÁGENES---------------- */
 
 function clickImagen() {
-    this.scrollIntoView({ behavior: 'smooth' });
+    this.scrollIntoView({ behavior: 'smooth', block: 'center'});
     this.querySelector('.cortina').classList.toggle('cortina-info');
     let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
     objetoDesplazado.classList.toggle('efecto-desplazamiento');
