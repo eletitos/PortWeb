@@ -24,8 +24,9 @@
     var caja;
     var videos;
     var playIcon = '<svg class="play-icon" viewBox="0 0 250 250" alt="Play video"><circle cx="125" cy="125" r="100" fill="none"  stroke-width="35" stroke="#fff"/><polygon points="95, 80 95, 170 170, 125" fill="#fff"/></svg>'
-    let hojaEstilo = document.styleSheets[1];
-    let cssSize = hojaEstilo.cssRules.length;
+    var hojaEstilo = document.styleSheets[1];
+    var cssSize = hojaEstilo.cssRules.length;
+    var comprobarInfoDesplegada = false;
     
     
    
@@ -87,6 +88,7 @@
                 setTimeout(function () {  primerScroll = false;}, 900);
             }
         }
+      
      });     
      
      
@@ -94,6 +96,15 @@
         if(botonMenu.checked || !modoMosaico){                          //Se fija el scroll si el menú está desplegado.
             document.body.style.overflow = 'hidden';
         }else{document.body.style.overflow = 'auto'}
+
+        if(comprobarInfoDesplegada){
+            imagen.forEach(function(val){
+                val.querySelector('.cortina').classList.remove('cortina-info');
+                let elementoDesplazado = val.querySelector('img') || val.querySelector('video');
+                elementoDesplazado.classList.remove('efecto-desplazamiento');
+                comprobarInfoDesplegada = false;
+            })
+        }
     });
            
     botonMenu.addEventListener('change',function () { 
@@ -108,10 +119,6 @@
         }
      });
 
-  
-   
-
-    
 
     about.addEventListener('click', function(){
         cortinaRoja.classList.remove('replegado');
@@ -273,7 +280,7 @@ function clickImagen() {
     this.querySelector('.cortina').classList.toggle('cortina-info');
     let objetoDesplazado = this.querySelector('img') || this.querySelector('video');
     objetoDesplazado.classList.toggle('efecto-desplazamiento');
-    
+    comprobarInfoDesplegada = true;  
 }
 
 /* ----------------FUNCIÓN PARA INTRODUCIR UNA NUEVA REGLA DE ESTILO--------- */
