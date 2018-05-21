@@ -8,9 +8,11 @@
     .contenedor-texto{
         position: fixed;
         width: 100%;
-        height: 100vh;
+        top:0;
+        bottom:0;
         display:flex;
         flex-direction: column;
+        justify-content: center;
         
     }
      .flecha{
@@ -30,12 +32,12 @@
 
 h1{
     margin: auto;
-    font-size: 10vmin;
+    font-size: 9vmin;
     text-align: center;
     width: 90%;
     color: $colorFuente;
     .hola{
-        font-size: 15vmin;
+        font-size: 14vmin;
         font-weight: 900;
     }
 }
